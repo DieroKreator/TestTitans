@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-06-28T18:53:33.133626" rpa="false" schemaversion="5">
+<suite id="s1" name="Po" source="c:\Iterasys\TestTitans2\tests\web\admin\po">
+<kw name="Obter Data e hora" owner="base_page_admin" type="SETUP">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-28T18:53:33.678947" level="INFO">${date} = 2024-06-28 18:53:33.679</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-28T18:53:33.677946" elapsed="0.006974"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2024-06-28T18:53:33.696418" level="INFO">${date} = 2024.06.28_18.53.33</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2024-06-28T18:53:33.685928" elapsed="0.011487"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-28T18:53:33.700405" level="INFO">${date} = 2024.06.28_18.53.33</msg>
+<msg time="2024-06-28T18:53:33.700405" level="INFO">${date} = None</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-28T18:53:33.699406" elapsed="0.001994"/>
+</kw>
+<status status="PASS" start="2024-06-28T18:53:33.674935" elapsed="0.026465"/>
+</kw>
+<suite id="s1-s1" name="Logar Admin Po" source="c:\Iterasys\TestTitans2\tests\web\admin\po\logar_admin_po.robot">
+<test id="s1-s1-t1" name="Test Successful Login" line="5">
+<kw name="Abrir navegador" owner="base_page_admin" type="SETUP">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:33.723885" level="INFO">Tirar Screenshot will be run on failure.</msg>
+<arg>Tirar Screenshot</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="PASS" start="2024-06-28T18:53:33.722887" elapsed="0.000998"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:33.724881" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/auth/entrar'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-28T18:53:33.723885" elapsed="7.145662"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-28T18:53:40.870891" elapsed="0.252703"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-06-28T18:53:41.127225" elapsed="0.024542"/>
+</kw>
+<status status="PASS" start="2024-06-28T18:53:33.722887" elapsed="7.429176"/>
+</kw>
+<kw name="Tirar Screenshot" owner="base_page_admin">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:41.377333" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestando/2024.06.28_18.53.33/Test%20Successful%20Login/1_Login.jpg"&gt;&lt;img src="screenshots/eveclassTestando/2024.06.28_18.53.33/Test%20Successful%20Login/1_Login.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-28T18:53:41.378336" level="INFO">c:\Iterasys\TestTitans2\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:829: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  return self.get_screenshot_as_file(filename)</msg>
+<arg>screenshots/eveclassTestando/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-28T18:53:41.161553" elapsed="0.218777"/>
+</kw>
+<arg>1_Login</arg>
+<status status="PASS" start="2024-06-28T18:53:41.159559" elapsed="0.221767"/>
+</kw>
+<kw name="Enter Email" owner="login_admin_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:41.392073" level="INFO">Typing text 'rodolfo_itg@yahoo.com.br' into text field 'css=.input-wrapper &gt; .input-wrapper-inpt &gt; input[type='email']'.</msg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-28T18:53:41.388568" elapsed="1.111982"/>
+</kw>
+<arg>rodolfo_itg@yahoo.com.br</arg>
+<status status="PASS" start="2024-06-28T18:53:41.382324" elapsed="1.118226"/>
+</kw>
+<kw name="Enter Password" owner="login_admin_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:42.507091" level="INFO">Typing text 'TESTE' into text field 'css=.input-wrapper &gt; .input-wrapper-inpt &gt; input[type='password']'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-28T18:53:42.506094" elapsed="0.510236"/>
+</kw>
+<arg>TESTE</arg>
+<status status="PASS" start="2024-06-28T18:53:42.503548" elapsed="0.512782"/>
+</kw>
+<kw name="Tirar Screenshot" owner="base_page_admin">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:43.178698" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestando/2024.06.28_18.53.33/Test%20Successful%20Login/2_Login%20preenchido.jpg"&gt;&lt;img src="screenshots/eveclassTestando/2024.06.28_18.53.33/Test%20Successful%20Login/2_Login%20preenchido.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/eveclassTestando/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-28T18:53:43.037062" elapsed="0.142632"/>
+</kw>
+<arg>2_Login preenchido</arg>
+<status status="PASS" start="2024-06-28T18:53:43.034021" elapsed="0.145673"/>
+</kw>
+<kw name="Click Login Button" owner="login_admin_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:43.183568" level="INFO">Clicking element 'css=.button-text &gt; span'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-28T18:53:43.183568" elapsed="0.196541"/>
+</kw>
+<status status="PASS" start="2024-06-28T18:53:43.181689" elapsed="0.200488"/>
+</kw>
+<kw name="Verify Login Successful" owner="login_admin_page">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:48.012702" level="INFO">Element 'css=.overview-group-title.overview-group-title_primary' is displayed.</msg>
+<arg>${SUCCESS_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-28T18:53:43.386463" elapsed="4.629830"/>
+</kw>
+<status status="PASS" start="2024-06-28T18:53:43.384362" elapsed="4.631931"/>
+</kw>
+<kw name="Tirar Screenshot" owner="base_page_admin">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-28T18:53:48.256953" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestando/2024.06.28_18.53.33/Test%20Successful%20Login/3_Logado%20com%20sucesso.jpg"&gt;&lt;img src="screenshots/eveclassTestando/2024.06.28_18.53.33/Test%20Successful%20Login/3_Logado%20com%20sucesso.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/eveclassTestando/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-28T18:53:48.025229" elapsed="0.232444"/>
+</kw>
+<arg>3_Logado com sucesso</arg>
+<status status="PASS" start="2024-06-28T18:53:48.022187" elapsed="0.236497"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-06-28T18:53:48.261224" elapsed="8.234059"/>
+</kw>
+<kw name="Fechar navegador" owner="base_page_admin" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-28T18:53:57.004050" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-28T18:53:56.502752" elapsed="0.502307"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-28T18:53:57.005569" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-28T18:53:56.498531" elapsed="0.508342"/>
+</kw>
+<doc>Testa o login bem-sucedido com credenciais válidas.</doc>
+<status status="PASS" start="2024-06-28T18:53:33.721893" elapsed="23.285490"/>
+</test>
+<status status="PASS" start="2024-06-28T18:53:33.702509" elapsed="23.311379"/>
+</suite>
+<status status="PASS" start="2024-06-28T18:53:33.152486" elapsed="23.869895"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Po">Po</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Logar Admin Po">Po.Logar Admin Po</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

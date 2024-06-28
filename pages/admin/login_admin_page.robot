@@ -9,7 +9,8 @@ ${SUPPORT_ACTION_BUTTON}  css=#support-action > .button-text > span > span
 ${EMAIL_INPUT}  css=.input-wrapper > .input-wrapper-inpt > input[type='email']
 ${PASSWORD_INPUT}  css=.input-wrapper > .input-wrapper-inpt > input[type='password']
 ${LOGIN_BUTTON}  css=.button-text > span
-${SUCCESS_ELEMENT}  css=.user-icon  # Altere para o seletor do elemento que indica sucesso
+#${SUCCESS_ELEMENT}  css=.user-icon  # Altere para o seletor do elemento que indica sucesso
+${SUCCESS_ELEMENT}  css=.overview-group-title.overview-group-title_primary
 
 * Keywords *
 Open Login Page
