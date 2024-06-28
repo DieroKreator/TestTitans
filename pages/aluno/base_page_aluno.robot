@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Library    DateTime
 
-# Resource    login_aluno_page.robot
+Resource    login_aluno_page.robot
 
 *** Variables ***
 ${timeout}    5000ms
@@ -16,7 +16,8 @@ Abrir navegador
     Open Browser    url=${url}    browser=${browser}
     Maximize Browser Window
     Set Browser Implicit Wait    10000ms
-    Wait Until Element Is Visible    css=overview-group-title.overview-group-title_primary    ${timeout}
+    #Wait Until Element Is Visible    css=auth-header    ${timeout}
+    #Wait Until Element Contains    css=.h1    Entrar    ${timeout}
 
 Fechar navegador
     Sleep    500ms
@@ -35,4 +36,4 @@ Obter Data e hora
 
 Tirar Screenshot    
     [Arguments]    ${screenshot_name}    
-    Capture Page Screenshot    screenshots/eveclassTestando/${date}/${TEST_NAME}/${screenshot_name}.jpg
+    Capture Page Screenshot    screenshots/eveclassTestandoAluno/${date}/${TEST_NAME}/${screenshot_name}.jpg

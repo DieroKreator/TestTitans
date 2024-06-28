@@ -39,4 +39,4 @@ Obter Data e hora
 
 Tirar Screenshot    
     [Arguments]    ${screenshot_name}    
-    Capture Page Screenshot    screenshots/eveclassTestando/${date}/${TEST_NAME}/${screenshot_name}.jpg
+    Capture Page Screenshot    screenshots/eveclassTestandoAdmin/${date}/${TEST_NAME}/${screenshot_name}.jpg
