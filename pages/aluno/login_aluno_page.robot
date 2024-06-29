@@ -10,7 +10,7 @@ ${EMAIL_INPUT}    css=.input-wrapper > .input-wrapper-inpt > input[type='email']
 ${PASSWORD_INPUT}    css=.input-wrapper > .input-wrapper-inpt > input[type='password']
 ${LOGIN_BUTTON}    css=.button-text > span
 #${SUCCESS_ELEMENT}  css=.user-icon  # Altere para o seletor do elemento que indica sucesso
-${SUCCESS_ELEMENT}    css=.account-sidebar-nav-title
+${SUCCESS_ELEMENT}    css=.account-sibebar-nav:nth-child(1) > .account-sidebar-nav-title
 
 
 * Keywords *
@@ -38,5 +38,6 @@ Click Login Button
 
 Verify Login Successful
     #Element Should Be Visible  ${SUCCESS_ELEMENT}
-    Wait Until Element Contains    ${SUCCESS_ELEMENT}    Conteúdos    5000ms       
-
+    Sleep    500ms
+    # Wait Until Element Contains    ${SUCCESS_ELEMENT}    Conteúdos    5000ms       
+    Wait Until Element Is Visible    ${SUCCESS_ELEMENT}       

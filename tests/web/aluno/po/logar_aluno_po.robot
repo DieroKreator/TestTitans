@@ -8,11 +8,11 @@ Test Successful Login
     Tirar Screenshot   1_Login
     #Click Começar Agora
     #Click Support Action Button
-    Enter Email    cograzattomma-9221@yopmail.com
+    Enter Email    jeigrapobreke-6833@yopmail.com
     Enter Password    Admin@2023
     Tirar Screenshot    2_Login preenchido
     Click Login Button
-    #Verify Login Successful
+    Verify Login Successful
     Tirar Screenshot    3_Logado com sucesso
     Close All Browsers
 
