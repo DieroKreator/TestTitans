@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../../pages/aluno/base_page_aluno.robot
+Resource    ../../../../pages/aluno/base_page_aluno.robot
 
 *** Test Cases ***
 Test Successful Login
