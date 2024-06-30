@@ -7,6 +7,7 @@ Resource    login_aluno_page.robot
 *** Variables ***
 ${timeout}    5000ms
 ${url}        https://testando.eveclass.com/pt/auth/entrar
+${url2}    https://testando.eveclass.com/pt/cursos
 ${browser}    Chrome
 ${date}
 
