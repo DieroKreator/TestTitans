@@ -8,8 +8,8 @@ Test Successful Login
     Tirar Screenshot   1_Login
     #Click Começar Agora
     #Click Support Action Button
-    Enter Email    cograzattomma-9221@yopmail.com
-    Enter Password    Admin@2023
+    Enter Email    arthur.guedes@hotmail.com
+    Enter Password    ArthurGuedes1708#
     Tirar Screenshot    2_Login preenchido
     Click Login Button
     #Verify Login Successful

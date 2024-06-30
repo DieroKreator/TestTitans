@@ -15,9 +15,10 @@ ${SUCCESS_ELEMENT}    css=.account-sidebar-nav-title
 
 * Keywords *
 Open Login Page
-    [Arguments]    ${url}
-    Open Browser    ${url}    browser=chrome
-    Set Window Size    829    700
+    #[Arguments]    ${url}
+    Open Browser    ${URL}    browser=chrome
+    #Set Window Size    829    700
+    Maximize Browser Window
 
 Click Começar Agora
     Click Link    ${LINK_TEXT_COMECAR_AGORA}
