@@ -16,7 +16,7 @@ Sacar Valor de Meu Saldo
     #Tirar Screenshot   3-Logado com sucesso
 
     #Pagina Vendas
-    Sleep    20000ms
+    Sleep    20000ms    #sleep p/ realizar login manual temporiariamente
     Clicar em "Vendas" 
     Element Text Should Be    ${btn_vendas}    Vendas
     Sleep    5000ms

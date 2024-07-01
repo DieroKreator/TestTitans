@@ -15,7 +15,7 @@ Consulta Relatório de Venda de Produtos
     #Tirar Screenshot   3-Logado com sucesso
 
     #Pagina Vendas
-    Sleep    20000ms
+    Sleep    20000ms    #sleep p/ realizar login manual temporiariamente
     Element Text Should Be    ${btn_vendas}    Vendas
     Tirar Screenshot    4-Visão Geral
     Clicar em "Vendas"  
