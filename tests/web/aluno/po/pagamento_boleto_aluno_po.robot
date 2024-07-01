@@ -4,7 +4,7 @@ Resource    ../../../pages/aluno/compra_page.robot
 Resource    ../../../pages/aluno/login_aluno_page.robot
 
 *** Test Cases ***
-Pagamento por pix
+Pagamento por boleto
     Abrir navegador   
     Enter Email    arthur.guedes@hotmail.com
     Enter Password    ArthurGuedes1708#
@@ -12,9 +12,9 @@ Pagamento por pix
     Acesso a página Cursos
     Acesso ao curso especifico escolhido
     Acesso a pagina de pagamento do curso
-    Clique na caixa "PIX"
+    Clique na caixa "Boleto"
     Preencher informacoes de pagamento : sou pessoa juridica , CPF , Telefone , Endereço
-    Clique no botão "Confirmar Compra" PIX
-    Tirar Screenshot    PIX GERADO COM SUCESSO
+    Clique no botão "Confirmar Compra" Boleto
+    Tirar Screenshot    PAGAMENTO COM BOLETO GERADO COM SUCESSO
     Close All Browsers
 
