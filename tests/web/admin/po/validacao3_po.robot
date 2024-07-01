@@ -7,6 +7,7 @@ Resource    ../../../pages/admin/validacao3_descricao.robot
 *** Variables ***
 ${URL}  https://testando.eveclass.com/pt/auth/entrar
   
+    
 
 *** Test Cases ***
 Validacao de produtos

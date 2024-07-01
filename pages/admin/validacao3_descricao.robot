@@ -13,7 +13,7 @@ ${SALES_BUTTON}    css=#SALES > .item-pill
 ${PRODUCTS_TAB}    css=.nav-group:nth-child(5) > .nav-item:nth-child(2) > span
 ${PRODUCT_TesteLink}   css=.list-item:nth-child(5) .list-item-content-title
 ${PRODUCT_NAME}    TesteLink
-${PRODUCT_VALUE}   amount
+${PRODUCT_VALUE}   aR$ 9,00
 ${browser}    
 
 *** Keywords ***
@@ -32,6 +32,7 @@ Click em TesteLink
 
 Verify Page Contains TesteLink
     Page Should Contain    ${PRODUCT_NAME}
+
 
 Verify Page Contains R$ 9,00
     Page Should Contain    ${PRODUCT_VALUE}
