@@ -28,7 +28,7 @@ Clique na caixa "Cartão"
     Click Element    xpath=//button[text()=" Cartão "]
 
 Preencher informacoes de pagamento : sou pessoa juridica , CPF , Telefone , Endereço
-    Input Text    xpath=//input[@data-vv-as='CPF']    442.279.298-90
+    Input Text    xpath=//input[@data-vv-as='CPF']    096.353.340-10
     Input Text    xpath=//input[@data-vv-as='Telefone']    55551195201
     Input Text    xpath=//input[@data-vv-as='CEP']    01320000
 
@@ -37,7 +37,7 @@ Preencher informacoes de pagamento : cartão ,sou pessoa juridica , CPF , Telefo
     #Input Text    xpath=//input[@data-vv-as='MM/YY']    11/25
     #Input Text    xpath=//input[@data-vv-as='CVV']    763
     #Input Text    xpath=//input[@data-vv-as='Nome no cartão']    ARTHUR GUEDES DE ARAUJO    
-    Input Text    xpath=//input[@data-vv-as='CPF']    442.279.298-90
+    Input Text    xpath=//input[@data-vv-as='CPF']    096.353.340-10
     Input Text    xpath=//input[@data-vv-as='Telefone']    55551195201
     Input Text    xpath=//input[@data-vv-as='CEP']    01320000
     
