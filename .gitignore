@@ -1,5 +1,5 @@
-#/.venv
-#screenshots
-#log.html
-#output.xml
-#report.html
+.venv
+screenshots
+log.html
+output.xml
+report.html
