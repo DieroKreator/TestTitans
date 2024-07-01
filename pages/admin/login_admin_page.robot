@@ -34,8 +34,8 @@ Enter Password
 
 Click Login Button
     Click Element  ${LOGIN_BUTTON}
-
+    Sleep    50s
 Verify Login Successful
     Element Should Be Visible  ${SUCCESS_ELEMENT}
 
-
+    

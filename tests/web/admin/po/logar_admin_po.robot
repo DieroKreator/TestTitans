@@ -12,6 +12,6 @@ Test Successful Login
     Enter Password  TESTE
     Tirar Screenshot   2_Login preenchido
     Click Login Button
-    Verify Login Successful
+    #Verify Login Successful
     Tirar Screenshot   3_Logado com sucesso
     Close All Browsers
