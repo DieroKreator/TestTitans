@@ -9,7 +9,6 @@ ${URL}  https://testando.eveclass.com/pt/auth/entrar
 
 *** Test Cases ***
 Validacao de produtos
-    Abrir navegador
     Enter Email    rodolfo_itg@yahoo.com.br
     Enter Password    TESTE
     Click Login Button
