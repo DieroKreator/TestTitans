@@ -2,7 +2,8 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${botao_procurar_cursos}    css=span.button-text    
+${botao_procurar_cursos}    css=span.button-text   
+${botao_voltar}    a.btn-topbar 
 
 *** Keywords ***
 Clicar no botao Procurar Cursos
