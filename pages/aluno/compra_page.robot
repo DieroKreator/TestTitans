@@ -2,11 +2,12 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${titulo_comprar}    css=span[class="mobile-text"]
-${campo_cpf}    css=input[id="possui um cupom aplique aqui-i-1230196058532522"]
-${campo_telefone}    css=input[id="telefone-i-5499720810494603"]
-${campo_CEP}    css=input[name="cep-i-5717017440634384"]
-${campo_numero}    id=numero-i-8886531804149704
+${titulo_comprar}    css=span.mobile-text
+${campo_cpf}    css=#cpf-i-2675898788229057
+${campo_telefone}    css=#telefone-i-8120929323059273
+${campo_CEP}    css=#cep-i-6688931628059766
+${campo_numero}    css=#numero-i-7765842485616674
+
 ${botao_confirmar_compra}    css=i[class="far fa-check"]   
 
 *** Keywords ***
