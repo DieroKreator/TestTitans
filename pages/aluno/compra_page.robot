@@ -13,6 +13,7 @@ Acesso a página Cursos
 
 Acesso ao curso especifico escolhido
     [Documentation]    Step: acesso ao curso especifico escolhido
+    Sleep    3000ms
     Click Element    xpath=//h3[text()="Curso de Matemática"]
 
 Acesso a pagina de pagamento do curso 
