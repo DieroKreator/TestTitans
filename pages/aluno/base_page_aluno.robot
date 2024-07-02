@@ -25,7 +25,7 @@ Fechar navegador
 
 Realizar Logout
     # Click Button    css=.dropdown-icon.fas.fa-chevron-down
-    Mouse Over    locator
+    Mouse Over    .dropdown-icon.fas.fa-chevron-down
     Wait Until Element Is Visible    css=.dropdown-item.dropdown_footer
     Click Link    css=.dropdown-item.dropdown_footer   
     Wait Until Element Contains    css=.span    Advanced Tests - Teste

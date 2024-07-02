@@ -2,11 +2,11 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${titulo_comprar}    css=span.mobile-text
-${campo_cpf}    css=#cpf-i-2675898788229057
-${campo_telefone}    css=#telefone-i-8120929323059273
-${campo_CEP}    css=#cep-i-6688931628059766
-${campo_numero}    css=#numero-i-7765842485616674
+${titulo_comprar}    css=.span.mobile-text
+${campo_cpf}    xpath=//input[@data-vv-as='CPF']
+${campo_telefone}    xpath=//input[@data-vv-as='Telefone']
+${campo_CEP}    xpath=//input[@data-vv-as='CEP']
+${campo_numero}    xpath=//div[2]/div/div[3]/div/div/input
 
 ${botao_confirmar_compra}    css=i[class="far fa-check"]   
 

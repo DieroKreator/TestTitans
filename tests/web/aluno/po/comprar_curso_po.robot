@@ -7,14 +7,14 @@ Resource    ../../../../pages/aluno/compra_page.robot
 Resource    ../../../../pages/aluno/confirmacao_page.robot
 
 *** Test Cases ***
-Compra Curso Graca
-    [Documentation]  Testa o login bem-sucedido com credenciais válidas.
+Comprar Curso Graca
+    [Documentation]  Testa o fluxo de compra de um curso de graça
     # Open Login Page  ${URL}
     Tirar Screenshot   1_Login
     #Click Começar Agora
     #Click Support Action Button
     Enter Email    froffummegupra-6629@yopmail.com
-    Enter Password    Admin@2024
+    Enter Password    Admin@24
     Tirar Screenshot    2_Login preenchido
     Click Login Button
     Verify Login Successful
@@ -27,14 +27,15 @@ Compra Curso Graca
     # Element Text Should Be    ${valor_curso}    $0.00
     Tirar Screenshot    5_Detalhe curso       
     Clicar no botao Comprar
-    # Element Text Should Be    ${titulo_comprar}    Compra Segura
+    # Element Text Should Be    ${titulo_comprar}    Comprar
     Input Text    ${campo_cpf}    361.063.079-54
     Input Text    ${campo_telefone}    (61) 99900-9403
     Input Text    ${campo_CEP}    73350-350
+    Sleep    500ms
     Input Text    ${campo_numero}    856
     Tirar Screenshot    6_Campos preenchidos       
-    # Clicar no botao Confirmar Compra
-    # Element Text Should Be    ${titulo_confirmacao}    Compra realizada com sucesso!
+    Clicar no botao Confirmar Compra
+    Element Text Should Be    ${titulo_confirmacao}    Compra realizada com sucesso!
     # Tirar Screenshot    7_Compra confirmada    
     # Realizar Logout 
     Close All Browsers

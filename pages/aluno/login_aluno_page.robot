@@ -38,6 +38,6 @@ Click Login Button
 
 Verify Login Successful
     #Element Should Be Visible  ${SUCCESS_ELEMENT}
-    Sleep    500ms
+    Sleep    2000ms
     # Wait Until Element Contains    ${SUCCESS_ELEMENT}    Conteúdos    5000ms       
     Wait Until Element Is Visible    ${SUCCESS_ELEMENT}       
