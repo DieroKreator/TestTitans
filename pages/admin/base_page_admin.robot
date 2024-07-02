@@ -7,6 +7,9 @@ Resource    consultar_venda_produtos_page.robot
 Resource    consultar_saldo_total_page.robot
 Resource    sacar_page.robot
 Resource    login_admin_page.robot
+Resource    nova_aula_page.robot
+Resource    aulas_page.robot
+Resource    conteudos_aulas_page.robot
 
 *** Variables ***
 ${timeout}    5000ms

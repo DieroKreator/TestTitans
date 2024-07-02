@@ -1,249 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-02T16:10:41.312741" rpa="false" schemaversion="5">
-<suite id="s1" name="Po" source="c:\Iterasys\TestTitans2\tests\web\aluno\po">
-<kw name="Obter Data e hora" owner="base_page_aluno" type="SETUP">
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-07-02T17:45:42.959009" rpa="false" schemaversion="5">
+<suite id="s1" name="Po" source="c:\Users\PC\OneDrive\Área de Trabalho\Novo\TestTitans\tests\web\admin\po">
+<kw name="Obter Data e hora" owner="base_page_admin" type="SETUP">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-07-02T16:10:41.703754" level="INFO">${date} = 2024-07-02 16:10:41.704</msg>
+<msg time="2024-07-02T17:45:43.958208" level="INFO">${date} = 2024-07-02 17:45:43.958</msg>
 <var>${date}</var>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-07-02T16:10:41.702800" elapsed="0.002944"/>
+<status status="PASS" start="2024-07-02T17:45:43.958208" elapsed="0.001000"/>
 </kw>
 <kw name="Convert Date" owner="DateTime">
-<msg time="2024-07-02T16:10:41.712739" level="INFO">${date} = 2024.07.02_16.10.41</msg>
+<msg time="2024-07-02T17:45:43.971215" level="INFO">${date} = 2024.07.02_17.45.43</msg>
 <var>${date}</var>
 <arg>${date}</arg>
 <arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
 <doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-07-02T16:10:41.707219" elapsed="0.005520"/>
+<status status="PASS" start="2024-07-02T17:45:43.960209" elapsed="0.011006"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-07-02T16:10:41.713737" level="INFO">${date} = 2024.07.02_16.10.41</msg>
-<msg time="2024-07-02T16:10:41.713737" level="INFO">${date} = None</msg>
+<msg time="2024-07-02T17:45:43.974210" level="INFO">${date} = 2024.07.02_17.45.43</msg>
+<msg time="2024-07-02T17:45:43.974210" level="INFO">${date} = None</msg>
 <var>${date}</var>
 <arg>${date}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-07-02T16:10:41.713737" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-02T17:45:43.972212" elapsed="0.001998"/>
 </kw>
-<status status="PASS" start="2024-07-02T16:10:41.701805" elapsed="0.012927"/>
+<status status="PASS" start="2024-07-02T17:45:43.950208" elapsed="0.025002"/>
 </kw>
-<suite id="s1-s1" name="Pagamento Pix Aluno Po" source="c:\Iterasys\TestTitans2\tests\web\aluno\po\pagamento_pix_aluno_po.robot">
-<test id="s1-s1-t1" name="Pagamento por pix" line="7">
-<kw name="Abrir navegador" owner="base_page_aluno" type="SETUP">
-<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:41.757582" level="INFO">Tirar Screenshot will be run on failure.</msg>
-<arg>Tirar Screenshot</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-07-02T16:10:41.756017" elapsed="0.001565"/>
-</kw>
+<suite id="s1-s1" name="Consultar Aula Po" source="c:\Users\PC\OneDrive\Área de Trabalho\Novo\TestTitans\tests\web\admin\po\consultar_aula_po.robot">
+<test id="s1-s1-t1" name="Test Successful Consultar Aula" line="5">
+<kw name="Abrir navegador" owner="base_page_admin" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:41.758582" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/auth/entrar'.</msg>
+<msg time="2024-07-02T17:45:44.063727" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/auth/entrar'.</msg>
 <arg>url=${url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-02T16:10:41.757582" elapsed="4.060307"/>
+<status status="PASS" start="2024-07-02T17:45:44.062728" elapsed="7.596948"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-02T16:10:45.817889" elapsed="0.039905"/>
+<status status="PASS" start="2024-07-02T17:45:51.659676" elapsed="0.106003"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>10000ms</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-02T16:10:45.859128" elapsed="0.002340"/>
+<status status="PASS" start="2024-07-02T17:45:51.765679" elapsed="0.010999"/>
 </kw>
-<status status="PASS" start="2024-07-02T16:10:41.755019" elapsed="4.107447"/>
+<status status="PASS" start="2024-07-02T17:45:44.061728" elapsed="7.715949"/>
 </kw>
-<kw name="Abrir navegador" owner="base_page_aluno">
-<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:45.865944" level="INFO">Tirar Screenshot will be run on failure.</msg>
-<arg>Tirar Screenshot</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-07-02T16:10:45.864961" elapsed="0.000983"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:45.872507" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/auth/entrar'.</msg>
-<arg>url=${url}</arg>
-<arg>browser=${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-02T16:10:45.869512" elapsed="3.957101"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-02T16:10:49.826613" elapsed="0.058109"/>
-</kw>
-<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
-<arg>10000ms</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-02T16:10:49.885829" elapsed="0.013925"/>
-</kw>
-<status status="PASS" start="2024-07-02T16:10:45.863943" elapsed="4.036813"/>
-</kw>
-<kw name="Enter Email" owner="login_aluno_page">
+<kw name="Enter Email" owner="login_admin_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:49.912718" level="INFO">Typing text 'arthur.guedes@hotmail.com' into text field 'css=.input-wrapper &gt; .input-wrapper-inpt &gt; input[type='email']'.</msg>
+<msg time="2024-07-02T17:45:51.781678" level="INFO">Typing text 'alinelenzi@gmail.com' into text field 'css=.input-wrapper &gt; .input-wrapper-inpt &gt; input[type='email']'.</msg>
 <arg>${EMAIL_INPUT}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:49.909748" elapsed="0.515773"/>
+<status status="PASS" start="2024-07-02T17:45:51.780677" elapsed="0.381555"/>
 </kw>
-<arg>arthur.guedes@hotmail.com</arg>
-<status status="PASS" start="2024-07-02T16:10:49.904762" elapsed="0.521755"/>
+<arg>alinelenzi@gmail.com</arg>
+<status status="PASS" start="2024-07-02T17:45:51.779678" elapsed="0.382554"/>
 </kw>
-<kw name="Enter Password" owner="login_aluno_page">
+<kw name="Enter Password" owner="login_admin_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:50.434774" level="INFO">Typing text 'ArthurGuedes1708#' into text field 'css=.input-wrapper &gt; .input-wrapper-inpt &gt; input[type='password']'.</msg>
+<msg time="2024-07-02T17:45:52.167232" level="INFO">Typing text 'teste' into text field 'css=.input-wrapper &gt; .input-wrapper-inpt &gt; input[type='password']'.</msg>
 <arg>${PASSWORD_INPUT}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:50.431788" elapsed="0.190786"/>
+<status status="PASS" start="2024-07-02T17:45:52.166233" elapsed="0.163039"/>
 </kw>
-<arg>ArthurGuedes1708#</arg>
-<status status="PASS" start="2024-07-02T16:10:50.430788" elapsed="0.191786"/>
+<arg>teste</arg>
+<status status="PASS" start="2024-07-02T17:45:52.166233" elapsed="0.163039"/>
 </kw>
-<kw name="Click Login Button" owner="login_aluno_page">
+<kw name="Click Login Button" owner="login_admin_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:50.624574" level="INFO">Clicking element 'css=.button-text &gt; span'.</msg>
+<msg time="2024-07-02T17:45:52.339271" level="INFO">Clicking element 'css=.button-text &gt; span'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:50.624574" elapsed="0.087669"/>
+<status status="PASS" start="2024-07-02T17:45:52.338271" elapsed="0.089001"/>
 </kw>
-<status status="PASS" start="2024-07-02T16:10:50.623576" elapsed="0.088667"/>
-</kw>
-<kw name="Acesso a página Cursos" owner="compra_page">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T16:10:52.716319" level="INFO">Slept 2 seconds.</msg>
-<arg>2000ms</arg>
+<msg time="2024-07-02T17:46:42.428905" level="INFO">Slept 50 seconds.</msg>
+<arg>50s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T16:10:50.714502" elapsed="2.003852"/>
+<status status="PASS" start="2024-07-02T17:45:52.428272" elapsed="50.000633"/>
 </kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:52.720345" level="INFO">Simulating Mouse Over on element 'css=.dropdown.user-dropdown'.</msg>
-<arg>css=.dropdown.user-dropdown</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:52.719348" elapsed="1.063799"/>
+<status status="PASS" start="2024-07-02T17:45:52.337270" elapsed="50.091635"/>
 </kw>
+<kw name="Clicar Botao Aulas" owner="conteudos_aulas_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:53.786144" level="INFO">Clicking element 'xpath=//p[text()="Website"]'.</msg>
-<arg>xpath=//p[text()="Website"]</arg>
+<msg time="2024-07-02T17:46:42.430907" level="INFO">Clicking element 'css=.nav-group:nth-child(6) &gt; .nav-item:nth-child(2) &gt; span'.</msg>
+<arg>${btn_Aulas}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:53.784142" elapsed="0.159458"/>
+<status status="PASS" start="2024-07-02T17:46:42.430907" elapsed="0.162999"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:53.945599" level="INFO">Clicking element 'id=16237702146520'.</msg>
-<arg>id=16237702146520</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:53.944604" elapsed="1.070249"/>
+<status status="PASS" start="2024-07-02T17:46:42.430907" elapsed="0.162999"/>
 </kw>
-<doc>Step: acesso a página Cursos</doc>
-<status status="PASS" start="2024-07-02T16:10:50.714502" elapsed="4.301347"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T17:46:42.599908" level="INFO">Verifying element 'css=.button:nth-child(4) &gt; .button-text &gt; span &gt; span' contains exact text 'Nova Aula'.</msg>
+<arg>${btn_NovaAula}</arg>
+<arg>Nova Aula</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-02T17:46:42.599908" elapsed="1.380007"/>
 </kw>
-<kw name="Acesso ao curso especifico escolhido" owner="compra_page">
+<kw name="Preencher Input Buscar" owner="conteudos_aulas_page">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T16:10:58.022808" level="INFO">Slept 3 seconds.</msg>
-<arg>3000ms</arg>
+<msg time="2024-07-02T17:46:44.484075" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T16:10:55.020242" elapsed="3.002566"/>
+<status status="PASS" start="2024-07-02T17:46:43.982915" elapsed="0.502160"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:58.025165" level="INFO">Clicking element 'xpath=//h3[text()="Curso de Matemática"]'.</msg>
-<arg>xpath=//h3[text()="Curso de Matemática"]</arg>
+<msg time="2024-07-02T17:46:44.486076" level="INFO">Clicking element 'css=.input-wrapper-inpt &gt;input'.</msg>
+<arg>${buscar}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:58.024161" elapsed="0.086715"/>
+<status status="PASS" start="2024-07-02T17:46:44.485075" elapsed="0.213001"/>
 </kw>
-<doc>Step: acesso ao curso especifico escolhido</doc>
-<status status="PASS" start="2024-07-02T16:10:55.018837" elapsed="3.092039"/>
-</kw>
-<kw name="Acesso a pagina de pagamento do curso" owner="compra_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:58.113852" level="INFO">Clicking element 'xpath=//span[text()="Comprar"]'.</msg>
-<arg>xpath=//span[text()="Comprar"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:58.112855" elapsed="1.121464"/>
-</kw>
-<status status="PASS" start="2024-07-02T16:10:58.111858" elapsed="1.123459"/>
-</kw>
-<kw name="Clique na caixa &quot;PIX&quot;" owner="compra_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:10:59.239413" level="INFO">Clicking element 'xpath=//button[text()=" PIX "]'.</msg>
-<arg>xpath=//button[text()=" PIX "]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:10:59.238145" elapsed="1.407781"/>
-</kw>
-<status status="PASS" start="2024-07-02T16:10:59.236710" elapsed="1.409216"/>
-</kw>
-<kw name="Preencher informacoes de pagamento : sou pessoa juridica , CPF , Telefone , Endereço" owner="compra_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:11:00.649277" level="INFO">Typing text '096.353.340-10' into text field 'xpath=//input[@data-vv-as='CPF']'.</msg>
-<arg>xpath=//input[@data-vv-as='CPF']</arg>
-<arg>096.353.340-10</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:11:00.647925" elapsed="0.204536"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-02T17:46:45.199254" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-02T17:46:44.698076" elapsed="0.501178"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:11:00.855458" level="INFO">Typing text '55551195201' into text field 'xpath=//input[@data-vv-as='Telefone']'.</msg>
-<arg>xpath=//input[@data-vv-as='Telefone']</arg>
-<arg>55551195201</arg>
+<msg time="2024-07-02T17:46:45.200241" level="INFO">Typing text 'Nuvem' into text field 'css=.input-wrapper-inpt &gt;input'.</msg>
+<arg>${buscar}</arg>
+<arg>${aulaProcurada}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:11:00.854453" elapsed="0.396208"/>
+<status status="PASS" start="2024-07-02T17:46:45.199254" elapsed="0.278484"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:11:01.252651" level="INFO">Typing text '01320000' into text field 'xpath=//input[@data-vv-as='CEP']'.</msg>
-<arg>xpath=//input[@data-vv-as='CEP']</arg>
-<arg>01320000</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:11:01.251655" elapsed="0.207839"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-02T17:46:46.478932" level="INFO">Slept 1 second.</msg>
+<arg>1000ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-02T17:46:45.478738" elapsed="1.000194"/>
 </kw>
-<status status="PASS" start="2024-07-02T16:11:00.646929" elapsed="0.813561"/>
-</kw>
-<kw name="Clique no botão &quot;Confirmar Compra&quot; PIX" owner="compra_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:11:01.463481" level="INFO">Clicking element 'xpath=//span[text()="Confirmar Compra"]'.</msg>
-<arg>xpath=//span[text()="Confirmar Compra"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T16:11:01.462486" elapsed="0.128309"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:11:05.862098" level="INFO">Current page contains text 'Escaneie o QR Code com o aplicativo do seu banco para realizar o pagamento.'.</msg>
-<arg>Escaneie o QR Code com o aplicativo do seu banco para realizar o pagamento.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-07-02T16:11:01.591790" elapsed="4.270308"/>
-</kw>
-<status status="PASS" start="2024-07-02T16:11:01.461487" elapsed="4.400611"/>
-</kw>
-<kw name="Tirar Screenshot" owner="base_page_aluno">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-07-02T16:11:05.979905" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_16.10.41/Pagamento%20por%20pix/PIX%20GERADO%20COM%20SUCESSO.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_16.10.41/Pagamento%20por%20pix/PIX%20GERADO%20COM%20SUCESSO.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-07-02T16:11:05.980874" level="INFO">c:\Iterasys\TestTitans2\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:829: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
-  return self.get_screenshot_as_file(filename)</msg>
-<arg>screenshots/eveclassTestandoAluno/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-07-02T16:11:05.865196" elapsed="0.116680"/>
-</kw>
-<arg>PIX GERADO COM SUCESSO</arg>
-<status status="PASS" start="2024-07-02T16:11:05.863094" elapsed="0.119779"/>
+<arg>Nuvem</arg>
+<status status="PASS" start="2024-07-02T17:46:43.982915" elapsed="2.496017"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-07-02T16:11:05.983870" elapsed="13.975156"/>
+<status status="PASS" start="2024-07-02T17:46:46.495933" elapsed="7.512143"/>
 </kw>
-<kw name="Fechar navegador" owner="base_page_aluno" type="TEARDOWN">
+<kw name="Fechar navegador" owner="base_page_admin" type="TEARDOWN">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T16:11:20.460225" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-07-02T17:46:54.511160" level="INFO">Slept 500 milliseconds.</msg>
 <arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T16:11:19.960038" elapsed="0.500187"/>
+<status status="PASS" start="2024-07-02T17:46:54.011075" elapsed="0.500085"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-02T16:11:20.461239" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-02T17:46:54.512159" elapsed="0.000601"/>
 </kw>
-<status status="PASS" start="2024-07-02T16:11:19.960038" elapsed="0.501201"/>
+<status status="PASS" start="2024-07-02T17:46:54.010075" elapsed="0.503210"/>
 </kw>
-<status status="PASS" start="2024-07-02T16:10:41.752700" elapsed="38.709426"/>
+<status status="PASS" start="2024-07-02T17:45:44.057735" elapsed="70.463450"/>
 </test>
-<status status="PASS" start="2024-07-02T16:10:41.714732" elapsed="38.750389"/>
+<status status="PASS" start="2024-07-02T17:45:43.975210" elapsed="70.547263"/>
 </suite>
-<status status="PASS" start="2024-07-02T16:10:41.324760" elapsed="39.143354"/>
+<status status="PASS" start="2024-07-02T17:45:42.971008" elapsed="71.556227"/>
 </suite>
 <statistics>
 <total>
@@ -253,9 +166,13 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Po">Po</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Pagamento Pix Aluno Po">Po.Pagamento Pix Aluno Po</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Consultar Aula Po">Po.Consultar Aula Po</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-07-02T17:45:43.077008" level="WARN">Error in file 'c:\Users\PC\OneDrive\Área de Trabalho\Novo\TestTitans\pages\admin\base_page_admin.robot' on line 67: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-07-02T17:45:43.078008" level="WARN">Error in file 'c:\Users\PC\OneDrive\Área de Trabalho\Novo\TestTitans\pages\admin\base_page_admin.robot' on line 82: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-07-02T17:45:43.910210" level="ERROR">Error in file 'c:\Users\PC\OneDrive\Área de Trabalho\Novo\TestTitans\pages\admin\base_page_admin.robot' on line 4: Library '..\..\.venv\lib\python3.12\site-packages\robot\libraries\String.py' does not exist.</msg>
+<msg time="2024-07-02T17:45:43.982209" level="ERROR">Error in file 'c:\Users\PC\OneDrive\Área de Trabalho\Novo\TestTitans\pages\admin\base_page_admin.robot' on line 4: Library '..\..\.venv\lib\python3.12\site-packages\robot\libraries\String.py' does not exist.</msg>
 </errors>
 </robot>
