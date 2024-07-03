@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../../pages/admin/base_page_admin.robot
+Resource    ../../../../pages/admin/base_page_admin.robot
 
 *** Test Cases ***
 Test Successful Login
