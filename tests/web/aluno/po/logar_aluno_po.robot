@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../../pages/aluno/base_page_aluno.robot
+Resource    ../../../../pages/aluno/base_page_aluno.robot
 
 *** Test Cases ***
 Test Successful Login
@@ -12,7 +12,7 @@ Test Successful Login
     Enter Password    ArthurGuedes1708#
     Tirar Screenshot    2_Login preenchido
     Click Login Button
-    #Verify Login Successful
+    Verify Login Successful
     Tirar Screenshot    3_Logado com sucesso
     Close All Browsers
 
