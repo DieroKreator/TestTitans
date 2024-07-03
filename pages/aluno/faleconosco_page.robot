@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    ../../.venv/Lib/site-packages/robot/libraries/XML.py
-Resource    ../admin/saldo_total_page.robot
 
 *** Keywords ***
 Acesso a página Contato
