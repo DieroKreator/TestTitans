@@ -1,250 +1,250 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-02T19:33:40.989026" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-02T20:36:41.751252" rpa="false" schemaversion="5">
 <suite id="s1" name="Po" source="c:\Iterasys\TITANS\TestTitans-2\tests\web\aluno\po">
 <kw name="Obter Data e hora" owner="base_page_aluno" type="SETUP">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-07-02T19:33:41.899238" level="INFO">${date} = 2024-07-02 19:33:41.898</msg>
+<msg time="2024-07-02T20:36:42.012570" level="INFO">${date} = 2024-07-02 20:36:42.013</msg>
 <var>${date}</var>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-07-02T19:33:41.898241" elapsed="0.007984"/>
+<status status="PASS" start="2024-07-02T20:36:42.012570" elapsed="0.001994"/>
 </kw>
 <kw name="Convert Date" owner="DateTime">
-<msg time="2024-07-02T19:33:41.928165" level="INFO">${date} = 2024.07.02_19.33.41</msg>
+<msg time="2024-07-02T20:36:42.021544" level="INFO">${date} = 2024.07.02_20.36.42</msg>
 <var>${date}</var>
 <arg>${date}</arg>
 <arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
 <doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-07-02T19:33:41.907221" elapsed="0.021936"/>
+<status status="PASS" start="2024-07-02T20:36:42.015562" elapsed="0.005982"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-07-02T19:33:41.930964" level="INFO">${date} = 2024.07.02_19.33.41</msg>
-<msg time="2024-07-02T19:33:41.930964" level="INFO">${date} = None</msg>
+<msg time="2024-07-02T20:36:42.022541" level="INFO">${date} = 2024.07.02_20.36.42</msg>
+<msg time="2024-07-02T20:36:42.023539" level="INFO">${date} = None</msg>
 <var>${date}</var>
 <arg>${date}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-07-02T19:33:41.930172" elapsed="0.001797"/>
+<status status="PASS" start="2024-07-02T20:36:42.022541" elapsed="0.000998"/>
 </kw>
-<status status="PASS" start="2024-07-02T19:33:41.896249" elapsed="0.035720"/>
+<status status="PASS" start="2024-07-02T20:36:42.010573" elapsed="0.012966"/>
 </kw>
 <suite id="s1-s1" name="Menu" source="c:\Iterasys\TITANS\TestTitans-2\tests\web\aluno\po\Menu.robot">
 <test id="s1-s1-t1" name="Test Click Menu Item" line="14">
 <kw name="Abrir navegador" owner="base_page_aluno" type="SETUP">
 <kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:33:42.073115" level="INFO">Tirar Screenshot will be run on failure.</msg>
+<msg time="2024-07-02T20:36:42.046485" level="INFO">Tirar Screenshot will be run on failure.</msg>
 <arg>Tirar Screenshot</arg>
 <doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-07-02T19:33:42.070123" elapsed="0.003987"/>
+<status status="PASS" start="2024-07-02T20:36:42.045481" elapsed="0.001004"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:33:42.077104" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
+<msg time="2024-07-02T20:36:42.046485" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
 <arg>url=${url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-02T19:33:42.075109" elapsed="9.603611"/>
+<status status="PASS" start="2024-07-02T20:36:42.046485" elapsed="4.534939"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-02T19:33:51.679719" elapsed="0.434886"/>
+<status status="PASS" start="2024-07-02T20:36:46.582420" elapsed="0.162568"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>10000ms</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-02T19:33:52.115602" elapsed="0.002994"/>
+<status status="PASS" start="2024-07-02T20:36:46.745983" elapsed="0.002994"/>
 </kw>
-<status status="PASS" start="2024-07-02T19:33:42.065136" elapsed="10.054457"/>
+<status status="PASS" start="2024-07-02T20:36:42.045481" elapsed="4.703496"/>
 </kw>
 <kw name="Click Menu Item" owner="dash_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:33:52.159535" level="INFO">Clicking element 'xpath://a[contains(text(),'Cursos')]'.</msg>
+<msg time="2024-07-02T20:36:46.764935" level="INFO">Clicking element 'xpath://a[contains(text(),'Cursos')]'.</msg>
 <arg>xpath://a[contains(text(),'${menu_item}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T19:33:52.158536" elapsed="0.734152"/>
+<status status="PASS" start="2024-07-02T20:36:46.761944" elapsed="0.396938"/>
 </kw>
 <arg>Cursos</arg>
-<status status="PASS" start="2024-07-02T19:33:52.156534" elapsed="0.739696"/>
+<status status="PASS" start="2024-07-02T20:36:46.759948" elapsed="0.398934"/>
 </kw>
 <kw name="Verify Page Contains" owner="dash_page">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${expected_text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-07-02T19:33:52.908718" elapsed="0.135060"/>
+<status status="PASS" start="2024-07-02T20:36:47.162871" elapsed="0.088760"/>
 </kw>
 <arg>Cursos</arg>
-<status status="PASS" start="2024-07-02T19:33:52.905726" elapsed="0.139029"/>
+<status status="PASS" start="2024-07-02T20:36:47.160880" elapsed="0.090751"/>
 </kw>
 <kw name="Tirar Screenshot" owner="base_page_aluno">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:33:53.428879" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_19.33.41/Test%20Click%20Menu%20Item/1_Cursos.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_19.33.41/Test%20Click%20Menu%20Item/1_Cursos.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-07-02T19:33:53.429873" level="INFO">c:\Iterasys\TITANS\TestTitans-2\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:829: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+<msg time="2024-07-02T20:36:47.411205" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/1_Cursos.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/1_Cursos.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-02T20:36:47.412202" level="INFO">c:\Iterasys\TITANS\TestTitans-2\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:829: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
   return self.get_screenshot_as_file(filename)</msg>
 <arg>screenshots/eveclassTestandoAluno/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-07-02T19:33:53.048752" elapsed="0.393093"/>
+<status status="PASS" start="2024-07-02T20:36:47.253626" elapsed="0.159573"/>
 </kw>
 <arg>1_Cursos</arg>
-<status status="PASS" start="2024-07-02T19:33:53.045749" elapsed="0.397090"/>
+<status status="PASS" start="2024-07-02T20:36:47.252629" elapsed="0.160570"/>
 </kw>
 <kw name="Fechar navegador" owner="base_page_aluno" type="TEARDOWN">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T19:33:53.949803" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-07-02T20:36:47.915592" level="INFO">Slept 500 milliseconds.</msg>
 <arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T19:33:53.446827" elapsed="0.502976"/>
+<status status="PASS" start="2024-07-02T20:36:47.414198" elapsed="0.501394"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-02T19:33:53.951797" elapsed="4.041736"/>
+<status status="PASS" start="2024-07-02T20:36:47.916556" elapsed="2.379685"/>
 </kw>
-<status status="PASS" start="2024-07-02T19:33:53.445831" elapsed="4.548701"/>
+<status status="PASS" start="2024-07-02T20:36:47.414198" elapsed="2.883056"/>
 </kw>
 <doc>Testa o clique em um item do menu de cursos</doc>
-<status status="PASS" start="2024-07-02T19:33:42.054165" elapsed="15.940367"/>
+<status status="PASS" start="2024-07-02T20:36:42.044483" elapsed="8.253714"/>
 </test>
 <test id="s1-s1-t2" name="Test Click Menu Item" line="21">
 <kw name="Abrir navegador" owner="base_page_aluno" type="SETUP">
 <kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:33:58.005503" level="INFO">Tirar Screenshot will be run on failure.</msg>
+<msg time="2024-07-02T20:36:50.304182" level="INFO">Tirar Screenshot will be run on failure.</msg>
 <arg>Tirar Screenshot</arg>
 <doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-07-02T19:33:58.005503" elapsed="0.001014"/>
+<status status="PASS" start="2024-07-02T20:36:50.304182" elapsed="0.000000"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:33:58.007497" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
+<msg time="2024-07-02T20:36:50.305212" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
 <arg>url=${url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-02T19:33:58.006517" elapsed="4.223417"/>
+<status status="PASS" start="2024-07-02T20:36:50.305212" elapsed="3.997693"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-02T19:34:02.235930" elapsed="4.371755"/>
+<status status="PASS" start="2024-07-02T20:36:54.302905" elapsed="0.048868"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>10000ms</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-02T19:34:06.609680" elapsed="0.073040"/>
+<status status="PASS" start="2024-07-02T20:36:54.352772" elapsed="0.018950"/>
 </kw>
-<status status="PASS" start="2024-07-02T19:33:58.004530" elapsed="8.679186"/>
+<status status="PASS" start="2024-07-02T20:36:50.304182" elapsed="4.067540"/>
 </kw>
 <kw name="Click Menu Item" owner="dash_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:34:06.693690" level="INFO">Clicking element 'xpath://a[contains(text(),'Sobre')]'.</msg>
+<msg time="2024-07-02T20:36:54.392663" level="INFO">Clicking element 'xpath://a[contains(text(),'Sobre')]'.</msg>
 <arg>xpath://a[contains(text(),'${menu_item}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T19:34:06.692693" elapsed="0.867856"/>
+<status status="PASS" start="2024-07-02T20:36:54.391668" elapsed="0.318669"/>
 </kw>
 <arg>Sobre</arg>
-<status status="PASS" start="2024-07-02T19:34:06.690699" elapsed="0.871849"/>
+<status status="PASS" start="2024-07-02T20:36:54.388674" elapsed="0.321663"/>
 </kw>
 <kw name="Verify Page Contains" owner="dash_page">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${expected_text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-07-02T19:34:07.580494" elapsed="1.104865"/>
+<status status="PASS" start="2024-07-02T20:36:54.720312" elapsed="0.587465"/>
 </kw>
 <arg>Hora de falar sobre você</arg>
-<status status="PASS" start="2024-07-02T19:34:07.579499" elapsed="1.105860"/>
+<status status="PASS" start="2024-07-02T20:36:54.719314" elapsed="0.588463"/>
 </kw>
 <kw name="Tirar Screenshot" owner="base_page_aluno">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:34:09.018566" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_19.33.41/Test%20Click%20Menu%20Item/2_Sobre.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_19.33.41/Test%20Click%20Menu%20Item/2_Sobre.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-02T20:36:55.496239" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/2_Sobre.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/2_Sobre.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/eveclassTestandoAluno/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-07-02T19:34:08.698898" elapsed="0.320662"/>
+<status status="PASS" start="2024-07-02T20:36:55.309736" elapsed="0.186503"/>
 </kw>
 <arg>2_Sobre</arg>
-<status status="PASS" start="2024-07-02T19:34:08.695908" elapsed="0.324653"/>
+<status status="PASS" start="2024-07-02T20:36:55.308741" elapsed="0.188493"/>
 </kw>
 <kw name="Fechar navegador" owner="base_page_aluno" type="TEARDOWN">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T19:34:09.558301" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-07-02T20:36:56.000284" level="INFO">Slept 500 milliseconds.</msg>
 <arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T19:34:09.054989" elapsed="0.505316"/>
+<status status="PASS" start="2024-07-02T20:36:55.498231" elapsed="0.502053"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-02T19:34:09.562296" elapsed="3.165985"/>
+<status status="PASS" start="2024-07-02T20:36:56.001283" elapsed="2.339827"/>
 </kw>
-<status status="PASS" start="2024-07-02T19:34:09.052996" elapsed="3.677286"/>
+<status status="PASS" start="2024-07-02T20:36:55.498231" elapsed="2.843666"/>
 </kw>
 <doc>Testa o clique em um item do menu de cursos</doc>
-<status status="PASS" start="2024-07-02T19:33:58.000854" elapsed="14.744381"/>
+<status status="PASS" start="2024-07-02T20:36:50.302189" elapsed="8.039708"/>
 </test>
 <test id="s1-s1-t3" name="Test Click Menu Item" line="28">
 <kw name="Abrir navegador" owner="base_page_aluno" type="SETUP">
 <kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:34:12.759207" level="INFO">Tirar Screenshot will be run on failure.</msg>
+<msg time="2024-07-02T20:36:58.345885" level="INFO">Tirar Screenshot will be run on failure.</msg>
 <arg>Tirar Screenshot</arg>
 <doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-07-02T19:34:12.758202" elapsed="0.001999"/>
+<status status="PASS" start="2024-07-02T20:36:58.345885" elapsed="0.000997"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:34:12.764188" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
+<msg time="2024-07-02T20:36:58.346882" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
 <arg>url=${url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-02T19:34:12.762191" elapsed="4.776124"/>
+<status status="PASS" start="2024-07-02T20:36:58.346882" elapsed="3.959827"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-02T19:34:17.539313" elapsed="4.234241"/>
+<status status="PASS" start="2024-07-02T20:37:02.306709" elapsed="0.049871"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>10000ms</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-02T19:34:21.774552" elapsed="0.021523"/>
+<status status="PASS" start="2024-07-02T20:37:02.358576" elapsed="0.003999"/>
 </kw>
-<status status="PASS" start="2024-07-02T19:34:12.755215" elapsed="9.041816"/>
+<status status="PASS" start="2024-07-02T20:36:58.345885" elapsed="4.016690"/>
 </kw>
 <kw name="Click Menu Item" owner="dash_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:34:21.813551" level="INFO">Clicking element 'xpath://a[contains(text(),'Blog')]'.</msg>
+<msg time="2024-07-02T20:37:02.377545" level="INFO">Clicking element 'xpath://a[contains(text(),'Blog')]'.</msg>
 <arg>xpath://a[contains(text(),'${menu_item}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T19:34:21.811558" elapsed="1.050470"/>
+<status status="PASS" start="2024-07-02T20:37:02.369548" elapsed="0.377552"/>
 </kw>
 <arg>Blog</arg>
-<status status="PASS" start="2024-07-02T19:34:21.810560" elapsed="1.053470"/>
+<status status="PASS" start="2024-07-02T20:37:02.366559" elapsed="0.381526"/>
 </kw>
 <kw name="Verify Page Contains" owner="dash_page">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${expected_text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-07-02T19:34:22.870017" elapsed="1.192977"/>
+<status status="PASS" start="2024-07-02T20:37:02.749084" elapsed="0.678188"/>
 </kw>
 <arg>Escolhas do Editor</arg>
-<status status="PASS" start="2024-07-02T19:34:22.867011" elapsed="1.196969"/>
+<status status="PASS" start="2024-07-02T20:37:02.748085" elapsed="0.679187"/>
 </kw>
 <kw name="Tirar Screenshot" owner="base_page_aluno">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-07-02T19:34:24.822475" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_19.33.41/Test%20Click%20Menu%20Item/3_blog.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_19.33.41/Test%20Click%20Menu%20Item/3_blog.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-02T20:37:03.608789" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/3_blog.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/3_blog.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/eveclassTestandoAluno/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-07-02T19:34:24.066973" elapsed="0.756498"/>
+<status status="PASS" start="2024-07-02T20:37:03.429271" elapsed="0.179518"/>
 </kw>
 <arg>3_blog</arg>
-<status status="PASS" start="2024-07-02T19:34:24.064976" elapsed="0.759489"/>
+<status status="PASS" start="2024-07-02T20:37:03.428267" elapsed="0.180522"/>
 </kw>
 <kw name="Fechar navegador" owner="base_page_aluno" type="TEARDOWN">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T19:34:25.331496" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-07-02T20:37:04.110963" level="INFO">Slept 500 milliseconds.</msg>
 <arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T19:34:24.828455" elapsed="0.503808"/>
+<status status="PASS" start="2024-07-02T20:37:03.610780" elapsed="0.500183"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-02T19:34:25.333015" elapsed="3.947558"/>
+<status status="PASS" start="2024-07-02T20:37:04.110963" elapsed="2.389472"/>
 </kw>
-<status status="PASS" start="2024-07-02T19:34:24.827457" elapsed="4.454112"/>
+<status status="PASS" start="2024-07-02T20:37:03.609782" elapsed="2.890653"/>
 </kw>
 <doc>Testa o clique em um item do menu de cursos</doc>
-<status status="PASS" start="2024-07-02T19:34:12.751236" elapsed="16.550279"/>
+<status status="PASS" start="2024-07-02T20:36:58.344888" elapsed="8.156348"/>
 </test>
-<status status="PASS" start="2024-07-02T19:33:41.931969" elapsed="47.394517"/>
+<status status="PASS" start="2024-07-02T20:36:42.024554" elapsed="24.478678"/>
 </suite>
-<status status="PASS" start="2024-07-02T19:33:41.018945" elapsed="48.388291"/>
+<status status="PASS" start="2024-07-02T20:36:41.756232" elapsed="24.748993"/>
 </suite>
 <statistics>
 <total>
@@ -258,8 +258,8 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-07-02T19:33:41.979853" level="WARN">Imported resource file 'c:\Iterasys\TITANS\TestTitans-2\pages\aluno\dashboard_page.robot' is empty.</msg>
-<msg time="2024-07-02T19:33:57.999520" level="WARN">Multiple tests with name 'Test Click Menu Item' executed in suite 'Po.Menu'.</msg>
-<msg time="2024-07-02T19:34:12.750221" level="WARN">Multiple tests with name 'Test Click Menu Item' executed in suite 'Po.Menu'.</msg>
+<msg time="2024-07-02T20:36:42.031517" level="ERROR">Error in file 'c:\Iterasys\TITANS\TestTitans-2\tests\web\aluno\po\Menu.robot' on line 3: Resource file '..\..\..\pages\aluno\dashboard_page.robot' does not exist.</msg>
+<msg time="2024-07-02T20:36:50.301194" level="WARN">Multiple tests with name 'Test Click Menu Item' executed in suite 'Po.Menu'.</msg>
+<msg time="2024-07-02T20:36:58.343891" level="WARN">Multiple tests with name 'Test Click Menu Item' executed in suite 'Po.Menu'.</msg>
 </errors>
 </robot>
