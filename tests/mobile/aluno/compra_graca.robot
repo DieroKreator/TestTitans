@@ -16,30 +16,27 @@ Comprar Curso de Graca
     ...    appium:newCommandTimeout=${3600}    
     ...    appium:connectHardwareKeyboard=${True}
 
-    Switch To Context    NATIVE_APP
-    @{finger} =    Create List    ${740}    ${1812}
-    @{positions} =    Create List    ${finger}
-    Tap With Positions    ${100}    ${positions}
-    ${chrome_url_bar} =    Set Variable     id=com.android.chrome:id/url_bar
-    Input Text    ${chrome_url_bar}    https://testando.eveclass.com/pt
-    # Click Element    ${chrome_url_bar}
-    # ${el2} =    Set Variable     id=com.android.chrome:id/url_bar
-    # Input Text    ${el2}    https://testando.eveclass.com/pt
-    ${link_url} =    Set Variable     id=com.android.chrome:id/line_2
-    Click Element    ${link_url}
-    Swipe    ${534}    ${1549}    ${580}    ${1087}
-    ${btn_comecar_agora} =    Set Variable     android=new UiSelector().text("Começar Agora")
+    Go To Url    https://testando.eveclass.com/pt
+
+    ${titulo_home} =    Set Variable     android=new UiSelector().text("Advanced Tests - Teste")
+    Wait Until Element Is Visible    ${titulo_home}    Advanced Tests - Teste
+    Swipe    ${488}    ${1537}    ${530}    ${603}
+    ${btn_comecar_agora} =    Set Variable     accessibility_id=Começar Agora
     Click Element    ${btn_comecar_agora}
+    ${titulo_cursos} =    Set Variable     android=new UiSelector().text(" Todos cursos")
+    Wait Until Element Is Visible    ${titulo_cursos}     Todos cursos
     ${btn_entrar} =    Set Variable     android=new UiSelector().text("Entrar")
     Click Element    ${btn_entrar}
-    ${field_email} =    Set Variable     android=new UiSelector().resourceId("email-i-7025391239118604")
-    Input Text    ${field_email}    wivugroipesse-8868@yopmail.com
-    ${field_senha} =    Set Variable     android=new UiSelector().resourceId("senha-i-7350126298908037")
-    Input Text    ${field_senha}    Admin@23
+    ${titulo_login} =    Set Variable     android=new UiSelector().text("Insira seu email e senha de acesso.")
+    Wait Until Element Is Visible    ${titulo_login}    Insira seu email e senha de acesso.
+    ${el6} =    Set Variable     android=new UiSelector().resourceId("email-i-9324250751413105")
+    Input Text    ${el6}    wivugroipesse-8868@yopmail.com
+    ${el7} =    Set Variable     android=new UiSelector().resourceId("senha-i-25760529486026228")
+    Input Text    ${el7}    Admin@23
     ${btn_login} =    Set Variable     class=android.widget.Button
     Click Element    ${btn_login}
-    Swipe    ${622}    ${771}    ${595}    ${1263}
-    Swipe    ${656}    ${664}    ${542}    ${1152}
+    Swipe    ${668}    ${576}    ${587}    ${1320}
+    Swipe    ${687}    ${526}    ${610}    ${1461}    # Entrar Dashboard
     ${btn_procurar_curso} =    Set Variable     android=new UiSelector().text("Procurar cursos")
     Click Element    ${btn_procurar_curso}
     Swipe    ${523}    ${675}    ${519}    ${1419}
