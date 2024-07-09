@@ -19,4 +19,5 @@ Validacao de produtos
     Click em TesteLink
     Verify Page Contains TesteLink
     Verify Page Contains R$ 9,00
+    Tirar screenshot    R$ 9,00
     Fechar navegador

@@ -1,265 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-02T20:36:41.751252" rpa="false" schemaversion="5">
-<suite id="s1" name="Po" source="c:\Iterasys\TITANS\TestTitans-2\tests\web\aluno\po">
-<kw name="Obter Data e hora" owner="base_page_aluno" type="SETUP">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2024-07-02T20:36:42.012570" level="INFO">${date} = 2024-07-02 20:36:42.013</msg>
-<var>${date}</var>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-07-02T20:36:42.012570" elapsed="0.001994"/>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-09T14:22:59.008869" rpa="false" schemaversion="5">
+<suite id="s1" name="Verificar1 Mobile" source="c:\Iterasys\TITANS\TestTitans-2\tests\mobile\verificar1_mobile.robot">
+<test id="s1-t1" name="Test Case Name" line="24">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Opening the application...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:22:59.529811" elapsed="0.000998"/>
 </kw>
-<kw name="Convert Date" owner="DateTime">
-<msg time="2024-07-02T20:36:42.021544" level="INFO">${date} = 2024.07.02_20.36.42</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
-<doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-07-02T20:36:42.015562" elapsed="0.005982"/>
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>browserName=${BROWSER_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>ensureWebviewsHavePages=${True}</arg>
+<arg>url=${URL}</arg>
+<arg>nativeWebScreenshot=${True}</arg>
+<arg>newCommandTimeout=${3600}</arg>
+<arg>connectHardwareKeyboard=${True}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-07-09T14:22:59.530809" elapsed="45.946198"/>
 </kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-07-02T20:36:42.022541" level="INFO">${date} = 2024.07.02_20.36.42</msg>
-<msg time="2024-07-02T20:36:42.023539" level="INFO">${date} = None</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-07-02T20:36:42.022541" elapsed="0.000998"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Navigating to URL...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:23:45.478006" elapsed="0.001995"/>
 </kw>
-<status status="PASS" start="2024-07-02T20:36:42.010573" elapsed="0.012966"/>
+<kw name="Go To Url" owner="AppiumLibrary">
+<arg>${URL}</arg>
+<doc>Opens URL in default web browser.</doc>
+<status status="PASS" start="2024-07-09T14:23:45.480997" elapsed="2.719727"/>
 </kw>
-<suite id="s1-s1" name="Menu" source="c:\Iterasys\TITANS\TestTitans-2\tests\web\aluno\po\Menu.robot">
-<test id="s1-s1-t1" name="Test Click Menu Item" line="14">
-<kw name="Abrir navegador" owner="base_page_aluno" type="SETUP">
-<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:42.046485" level="INFO">Tirar Screenshot will be run on failure.</msg>
-<arg>Tirar Screenshot</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-07-02T20:36:42.045481" elapsed="0.001004"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Entering username...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:23:48.201725" elapsed="0.000997"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:42.046485" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
-<arg>url=${url}</arg>
-<arg>browser=${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-02T20:36:42.046485" elapsed="4.534939"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:48.579319" level="INFO">criteria is user-name</msg>
+<arg>${USERNAME}</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-07-09T14:23:48.203718" elapsed="0.380592"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-02T20:36:46.582420" elapsed="0.162568"/>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:48.594278" level="INFO">Typing text 'standard_user' into text field 'id=user-name'</msg>
+<msg time="2024-07-09T14:23:50.112219" level="INFO">criteria is user-name</msg>
+<arg>${USERNAME}</arg>
+<arg>standard_user</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-07-09T14:23:48.586301" elapsed="1.526914"/>
 </kw>
-<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
-<arg>10000ms</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-02T20:36:46.745983" elapsed="0.002994"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Entering password...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:23:50.113215" elapsed="0.000999"/>
 </kw>
-<status status="PASS" start="2024-07-02T20:36:42.045481" elapsed="4.703496"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:50.457295" level="INFO">criteria is password</msg>
+<arg>${PASSWORD}</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-07-09T14:23:50.115210" elapsed="0.342085"/>
 </kw>
-<kw name="Click Menu Item" owner="dash_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:46.764935" level="INFO">Clicking element 'xpath://a[contains(text(),'Cursos')]'.</msg>
-<arg>xpath://a[contains(text(),'${menu_item}')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T20:36:46.761944" elapsed="0.396938"/>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:50.461287" level="INFO">Typing text 'secret_sauce' into text field 'id=password'</msg>
+<msg time="2024-07-09T14:23:53.681674" level="INFO">criteria is password</msg>
+<arg>${PASSWORD}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-07-09T14:23:50.458292" elapsed="3.223382"/>
 </kw>
-<arg>Cursos</arg>
-<status status="PASS" start="2024-07-02T20:36:46.759948" elapsed="0.398934"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Clicking login button...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:23:53.682671" elapsed="0.000000"/>
 </kw>
-<kw name="Verify Page Contains" owner="dash_page">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${expected_text}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-07-02T20:36:47.162871" elapsed="0.088760"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:54.081604" level="INFO">criteria is login-button</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-07-09T14:23:53.684669" elapsed="0.396935"/>
 </kw>
-<arg>Cursos</arg>
-<status status="PASS" start="2024-07-02T20:36:47.160880" elapsed="0.090751"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:54.085595" level="INFO">Clicking element 'id=login-button'.</msg>
+<msg time="2024-07-09T14:23:56.400234" level="INFO">criteria is login-button</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-07-09T14:23:54.082602" elapsed="2.317632"/>
 </kw>
-<kw name="Tirar Screenshot" owner="base_page_aluno">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:47.411205" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/1_Cursos.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/1_Cursos.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-07-02T20:36:47.412202" level="INFO">c:\Iterasys\TITANS\TestTitans-2\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:829: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
-  return self.get_screenshot_as_file(filename)</msg>
-<arg>screenshots/eveclassTestandoAluno/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-07-02T20:36:47.253626" elapsed="0.159573"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Verifying product image...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:23:56.401230" elapsed="0.002994"/>
 </kw>
-<arg>1_Cursos</arg>
-<status status="PASS" start="2024-07-02T20:36:47.252629" elapsed="0.160570"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:56.714422" level="INFO">criteria is item_4_img_link</msg>
+<arg>${PRODUCT_IMAGE}</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-07-09T14:23:56.405221" elapsed="0.310165"/>
 </kw>
-<kw name="Fechar navegador" owner="base_page_aluno" type="TEARDOWN">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T20:36:47.915592" level="INFO">Slept 500 milliseconds.</msg>
-<arg>500ms</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T20:36:47.414198" elapsed="0.501394"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Verifying product name...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:23:56.715386" elapsed="0.000999"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-02T20:36:47.916556" elapsed="2.379685"/>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:57.038523" level="INFO">xpath criteria: //*[@id="item_4_title_link"]/div</msg>
+<arg>${PRODUCT_NAME}</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-07-09T14:23:56.717383" elapsed="0.321140"/>
 </kw>
-<status status="PASS" start="2024-07-02T20:36:47.414198" elapsed="2.883056"/>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:57.041515" level="INFO">Verifying element 'xpath=//*[@id="item_4_title_link"]/div' contains exactly text 'Sauce Labs Backpack'.</msg>
+<msg time="2024-07-09T14:23:57.669837" level="INFO">xpath criteria: //*[@id="item_4_title_link"]/div</msg>
+<arg>${PRODUCT_NAME}</arg>
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-09T14:23:57.039521" elapsed="0.630316"/>
 </kw>
-<doc>Testa o clique em um item do menu de cursos</doc>
-<status status="PASS" start="2024-07-02T20:36:42.044483" elapsed="8.253714"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Verifying product price...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:23:57.670833" elapsed="0.001996"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${PRODUCT_PRICE}</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-07-09T14:23:57.673826" elapsed="0.321140"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-07-09T14:23:57.996960" level="INFO">Verifying element 'class=inventory_item_price' contains exactly text '$29.99'.</msg>
+<arg>${PRODUCT_PRICE}</arg>
+<arg>\$29\.99</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-07-09T14:23:57.995964" elapsed="0.625337"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Test completed successfully.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-09T14:23:58.623288" elapsed="0.000997"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-07-09T14:23:58.625300" elapsed="0.677175"/>
+</kw>
+<doc>Test the login and product selection process on Sauce Demo</doc>
+<tag>mobile</tag>
+<status status="PASS" start="2024-07-09T14:22:59.527816" elapsed="59.775655"/>
 </test>
-<test id="s1-s1-t2" name="Test Click Menu Item" line="21">
-<kw name="Abrir navegador" owner="base_page_aluno" type="SETUP">
-<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:50.304182" level="INFO">Tirar Screenshot will be run on failure.</msg>
-<arg>Tirar Screenshot</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-07-02T20:36:50.304182" elapsed="0.000000"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:50.305212" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
-<arg>url=${url}</arg>
-<arg>browser=${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-02T20:36:50.305212" elapsed="3.997693"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-02T20:36:54.302905" elapsed="0.048868"/>
-</kw>
-<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
-<arg>10000ms</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-02T20:36:54.352772" elapsed="0.018950"/>
-</kw>
-<status status="PASS" start="2024-07-02T20:36:50.304182" elapsed="4.067540"/>
-</kw>
-<kw name="Click Menu Item" owner="dash_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:54.392663" level="INFO">Clicking element 'xpath://a[contains(text(),'Sobre')]'.</msg>
-<arg>xpath://a[contains(text(),'${menu_item}')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T20:36:54.391668" elapsed="0.318669"/>
-</kw>
-<arg>Sobre</arg>
-<status status="PASS" start="2024-07-02T20:36:54.388674" elapsed="0.321663"/>
-</kw>
-<kw name="Verify Page Contains" owner="dash_page">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${expected_text}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-07-02T20:36:54.720312" elapsed="0.587465"/>
-</kw>
-<arg>Hora de falar sobre você</arg>
-<status status="PASS" start="2024-07-02T20:36:54.719314" elapsed="0.588463"/>
-</kw>
-<kw name="Tirar Screenshot" owner="base_page_aluno">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:55.496239" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/2_Sobre.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/2_Sobre.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/eveclassTestandoAluno/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-07-02T20:36:55.309736" elapsed="0.186503"/>
-</kw>
-<arg>2_Sobre</arg>
-<status status="PASS" start="2024-07-02T20:36:55.308741" elapsed="0.188493"/>
-</kw>
-<kw name="Fechar navegador" owner="base_page_aluno" type="TEARDOWN">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T20:36:56.000284" level="INFO">Slept 500 milliseconds.</msg>
-<arg>500ms</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T20:36:55.498231" elapsed="0.502053"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-02T20:36:56.001283" elapsed="2.339827"/>
-</kw>
-<status status="PASS" start="2024-07-02T20:36:55.498231" elapsed="2.843666"/>
-</kw>
-<doc>Testa o clique em um item do menu de cursos</doc>
-<status status="PASS" start="2024-07-02T20:36:50.302189" elapsed="8.039708"/>
-</test>
-<test id="s1-s1-t3" name="Test Click Menu Item" line="28">
-<kw name="Abrir navegador" owner="base_page_aluno" type="SETUP">
-<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:58.345885" level="INFO">Tirar Screenshot will be run on failure.</msg>
-<arg>Tirar Screenshot</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-07-02T20:36:58.345885" elapsed="0.000997"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:36:58.346882" level="INFO">Opening browser 'Chrome' to base url 'https://testando.eveclass.com/pt/cursos'.</msg>
-<arg>url=${url}</arg>
-<arg>browser=${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-02T20:36:58.346882" elapsed="3.959827"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-02T20:37:02.306709" elapsed="0.049871"/>
-</kw>
-<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
-<arg>10000ms</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-07-02T20:37:02.358576" elapsed="0.003999"/>
-</kw>
-<status status="PASS" start="2024-07-02T20:36:58.345885" elapsed="4.016690"/>
-</kw>
-<kw name="Click Menu Item" owner="dash_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:37:02.377545" level="INFO">Clicking element 'xpath://a[contains(text(),'Blog')]'.</msg>
-<arg>xpath://a[contains(text(),'${menu_item}')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-02T20:37:02.369548" elapsed="0.377552"/>
-</kw>
-<arg>Blog</arg>
-<status status="PASS" start="2024-07-02T20:37:02.366559" elapsed="0.381526"/>
-</kw>
-<kw name="Verify Page Contains" owner="dash_page">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${expected_text}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-07-02T20:37:02.749084" elapsed="0.678188"/>
-</kw>
-<arg>Escolhas do Editor</arg>
-<status status="PASS" start="2024-07-02T20:37:02.748085" elapsed="0.679187"/>
-</kw>
-<kw name="Tirar Screenshot" owner="base_page_aluno">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-07-02T20:37:03.608789" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/3_blog.jpg"&gt;&lt;img src="screenshots/eveclassTestandoAluno/2024.07.02_20.36.42/Test%20Click%20Menu%20Item/3_blog.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/eveclassTestandoAluno/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-07-02T20:37:03.429271" elapsed="0.179518"/>
-</kw>
-<arg>3_blog</arg>
-<status status="PASS" start="2024-07-02T20:37:03.428267" elapsed="0.180522"/>
-</kw>
-<kw name="Fechar navegador" owner="base_page_aluno" type="TEARDOWN">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-02T20:37:04.110963" level="INFO">Slept 500 milliseconds.</msg>
-<arg>500ms</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-02T20:37:03.610780" elapsed="0.500183"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-02T20:37:04.110963" elapsed="2.389472"/>
-</kw>
-<status status="PASS" start="2024-07-02T20:37:03.609782" elapsed="2.890653"/>
-</kw>
-<doc>Testa o clique em um item do menu de cursos</doc>
-<status status="PASS" start="2024-07-02T20:36:58.344888" elapsed="8.156348"/>
-</test>
-<status status="PASS" start="2024-07-02T20:36:42.024554" elapsed="24.478678"/>
-</suite>
-<status status="PASS" start="2024-07-02T20:36:41.756232" elapsed="24.748993"/>
+<status status="PASS" start="2024-07-09T14:22:59.031805" elapsed="60.275659"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">mobile</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Po">Po</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Menu">Po.Menu</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Verificar1 Mobile">Verificar1 Mobile</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-07-02T20:36:42.031517" level="ERROR">Error in file 'c:\Iterasys\TITANS\TestTitans-2\tests\web\aluno\po\Menu.robot' on line 3: Resource file '..\..\..\pages\aluno\dashboard_page.robot' does not exist.</msg>
-<msg time="2024-07-02T20:36:50.301194" level="WARN">Multiple tests with name 'Test Click Menu Item' executed in suite 'Po.Menu'.</msg>
-<msg time="2024-07-02T20:36:58.343891" level="WARN">Multiple tests with name 'Test Click Menu Item' executed in suite 'Po.Menu'.</msg>
 </errors>
 </robot>
