@@ -16,6 +16,7 @@ Validacao de produtos
     Acesso a página Vendas
     Click Botão produtos
     Click em Lógica de programação
-    Verify Page Contains Lógica de programação
+    Verify Page Contains Lógica de programação    
     Verify Page Contains De Graça
+    Tirar screenshot    De Graça
     Fechar navegador

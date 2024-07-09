@@ -19,4 +19,5 @@ Validacao de produtos
     Click em Atividade Pomodoro
     Verify Page Contains Atividade Pomodoro
     Verify Page Contains De Graça
+    Tirar screenshot    De Graça
     Fechar navegador
