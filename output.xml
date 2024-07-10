@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-09T14:22:59.008869" rpa="false" schemaversion="5">
-<suite id="s1" name="Verificar1 Mobile" source="c:\Iterasys\TITANS\TestTitans-2\tests\mobile\verificar1_mobile.robot">
-<test id="s1-t1" name="Test Case Name" line="24">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Opening the application...</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:22:59.529811" elapsed="0.000998"/>
-</kw>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-07-10T10:30:11.777019" rpa="false" schemaversion="5">
+<suite id="s1" name="Selecionar Remover Bicicleta" source="d:\Eveclass\TestTitans - Atual\TestTitans\tests\mobile\saucedemo\selecionar_remover_bicicleta.robot">
+<test id="s1-t1" name="Selecionar e Remover Bicicleta do Carrinho" line="10">
 <kw name="Open Application" owner="AppiumLibrary">
+<msg time="2024-07-10T10:30:12.090862" level="FAIL">Variable '${REMOTE_URL}' not found.</msg>
 <arg>${REMOTE_URL}</arg>
-<arg>platformName=${PLATFORM_NAME}</arg>
-<arg>platformVersion=${PLATFORM_VERSION}</arg>
-<arg>deviceName=${DEVICE_NAME}</arg>
-<arg>browserName=${BROWSER_NAME}</arg>
-<arg>automationName=${AUTOMATION_NAME}</arg>
-<arg>ensureWebviewsHavePages=${True}</arg>
-<arg>url=${URL}</arg>
-<arg>nativeWebScreenshot=${True}</arg>
-<arg>newCommandTimeout=${3600}</arg>
-<arg>connectHardwareKeyboard=${True}</arg>
+<arg>platformName=Android</arg>
+<arg>appium:platformVersion=9.0</arg>
+<arg>appium:deviceName=Samsung Galaxy S9 FHD GoogleAPI Emulator</arg>
+<arg>browserName=chrome</arg>
+<arg>browserVersion=126</arg>
+<arg>appium:automationName=uiautomator2</arg>
+<arg>appium:ensureWebviewsHavePages=${True}</arg>
+<arg>appium:url=https://www.saucedemo.com/</arg>
+<arg>appium:nativeWebScreenshot=${True}</arg>
+<arg>appium:newCommandTimeout=${3600}</arg>
+<arg>appium:connectHardwareKeyboard=${True}</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://appium.io/docs/en/2.1/cli/args/
@@ -26,153 +23,134 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-07-09T14:22:59.530809" elapsed="45.946198"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Navigating to URL...</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:23:45.478006" elapsed="0.001995"/>
+<status status="FAIL" start="2024-07-10T10:30:12.089863" elapsed="0.002999">Variable '${REMOTE_URL}' not found.</status>
 </kw>
 <kw name="Go To Url" owner="AppiumLibrary">
-<arg>${URL}</arg>
+<arg>https://www.saucedemo.com/</arg>
 <doc>Opens URL in default web browser.</doc>
-<status status="PASS" start="2024-07-09T14:23:45.480997" elapsed="2.719727"/>
+<status status="NOT RUN" start="2024-07-10T10:30:12.093862" elapsed="0.000000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Entering username...</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:23:48.201725" elapsed="0.000997"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:48.579319" level="INFO">criteria is user-name</msg>
-<arg>${USERNAME}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-07-09T14:23:48.203718" elapsed="0.380592"/>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${txt_usuario}</var>
+<arg>id=user-name</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.094864" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:48.594278" level="INFO">Typing text 'standard_user' into text field 'id=user-name'</msg>
-<msg time="2024-07-09T14:23:50.112219" level="INFO">criteria is user-name</msg>
-<arg>${USERNAME}</arg>
+<arg>${txt_usuario}</arg>
 <arg>standard_user</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-07-09T14:23:48.586301" elapsed="1.526914"/>
+<status status="NOT RUN" start="2024-07-10T10:30:12.095862" elapsed="0.000000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Entering password...</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:23:50.113215" elapsed="0.000999"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:50.457295" level="INFO">criteria is password</msg>
-<arg>${PASSWORD}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-07-09T14:23:50.115210" elapsed="0.342085"/>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${txt_senha}</var>
+<arg>id=password</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.096863" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:50.461287" level="INFO">Typing text 'secret_sauce' into text field 'id=password'</msg>
-<msg time="2024-07-09T14:23:53.681674" level="INFO">criteria is password</msg>
-<arg>${PASSWORD}</arg>
+<arg>${txt_senha}</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-07-09T14:23:50.458292" elapsed="3.223382"/>
+<status status="NOT RUN" start="2024-07-10T10:30:12.098871" elapsed="0.000000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Clicking login button...</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:23:53.682671" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:54.081604" level="INFO">criteria is login-button</msg>
-<arg>${LOGIN_BUTTON}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-07-09T14:23:53.684669" elapsed="0.396935"/>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${btn_login}</var>
+<arg>id=login-button</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.100850" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:54.085595" level="INFO">Clicking element 'id=login-button'.</msg>
-<msg time="2024-07-09T14:23:56.400234" level="INFO">criteria is login-button</msg>
-<arg>${LOGIN_BUTTON}</arg>
+<arg>${btn_login}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-07-09T14:23:54.082602" elapsed="2.317632"/>
+<status status="NOT RUN" start="2024-07-10T10:30:12.103474" elapsed="0.001000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Verifying product image...</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:23:56.401230" elapsed="0.002994"/>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${img_produto}</var>
+<arg>id=item_0_img_link</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.106475" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:56.714422" level="INFO">criteria is item_4_img_link</msg>
-<arg>${PRODUCT_IMAGE}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-07-09T14:23:56.405221" elapsed="0.310165"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>${img_produto}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.108474" elapsed="0.000516"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Verifying product name...</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:23:56.715386" elapsed="0.000999"/>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${btn_login}</var>
+<arg>id=add-to-cart</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.108999" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:57.038523" level="INFO">xpath criteria: //*[@id="item_4_title_link"]/div</msg>
-<arg>${PRODUCT_NAME}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-07-09T14:23:56.717383" elapsed="0.321140"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>${btn_login}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.109998" elapsed="0.000000"/>
 </kw>
-<kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:57.041515" level="INFO">Verifying element 'xpath=//*[@id="item_4_title_link"]/div' contains exactly text 'Sauce Labs Backpack'.</msg>
-<msg time="2024-07-09T14:23:57.669837" level="INFO">xpath criteria: //*[@id="item_4_title_link"]/div</msg>
-<arg>${PRODUCT_NAME}</arg>
-<arg>Sauce Labs Backpack</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-07-09T14:23:57.039521" elapsed="0.630316"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Verifying product price...</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:23:57.670833" elapsed="0.001996"/>
-</kw>
-<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<arg>${PRODUCT_PRICE}</arg>
-<arg>10s</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-07-09T14:23:57.673826" elapsed="0.321140"/>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${label_titulo_card_produto}</var>
+<arg>id=back-to-products</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.111998" elapsed="0.000000"/>
 </kw>
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-07-09T14:23:57.996960" level="INFO">Verifying element 'class=inventory_item_price' contains exactly text '$29.99'.</msg>
-<arg>${PRODUCT_PRICE}</arg>
-<arg>\$29\.99</arg>
+<arg>${label_titulo_card_produto}</arg>
+<arg>Back to products</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-07-09T14:23:57.995964" elapsed="0.625337"/>
+<status status="NOT RUN" start="2024-07-10T10:30:12.112999" elapsed="0.001000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Test completed successfully.</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-07-09T14:23:58.623288" elapsed="0.000997"/>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${carrinho}</var>
+<arg>id=shopping_cart_container</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.114999" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>${carrinho}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.116193" elapsed="0.000312"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${btn_remover}</var>
+<arg>id=remove-sauce-labs-bike-light</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.117191" elapsed="0.001001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>${btn_remover}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2024-07-10T10:30:12.119192" elapsed="0.000000"/>
 </kw>
 <kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" start="2024-07-09T14:23:58.625300" elapsed="0.677175"/>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-07-10T10:30:12.121191" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2024-07-10T10:30:12.121191" elapsed="0.002999">No application is open</status>
 </kw>
-<doc>Test the login and product selection process on Sauce Demo</doc>
-<tag>mobile</tag>
-<status status="PASS" start="2024-07-09T14:22:59.527816" elapsed="59.775655"/>
+<msg time="2024-07-10T10:30:12.125190" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2024-07-10T10:30:12.128709" level="FAIL">No application is open</msg>
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="FAIL" start="2024-07-10T10:30:12.120190" elapsed="0.009519">No application is open</status>
+</kw>
+<status status="FAIL" start="2024-07-10T10:30:12.088826" elapsed="0.041405">Variable '${REMOTE_URL}' not found.
+
+Also teardown failed:
+No application is open</status>
 </test>
-<status status="PASS" start="2024-07-09T14:22:59.031805" elapsed="60.275659"/>
+<status status="FAIL" start="2024-07-10T10:30:11.782536" elapsed="0.350688"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">mobile</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Verificar1 Mobile">Verificar1 Mobile</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Selecionar Remover Bicicleta">Selecionar Remover Bicicleta</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-07-10T10:30:12.084266" level="ERROR">Error in file 'd:\Eveclass\TestTitans - Atual\TestTitans\tests\mobile\saucedemo\selecionar_remover_bicicleta.robot' on line 7: Setting variable '${REMOTE_URL}' failed: Environment variable '%{SAUCE_ACCESS_KEY}' not found.</msg>
+<msg time="2024-07-10T10:30:12.125190" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
