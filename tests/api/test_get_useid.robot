@@ -1,16 +1,18 @@
 *** Settings ***
-Library        RequestsLibrary
+Library    RequestsLibrary
 Library    OperatingSystem
-Resource       ../../resources/common.resource
-Variables      ../../resources/variables.py
-Suite Setup    Steps    ${url}    ${userName}    ${password}
+Resource       ../../resources/common.resource/
+
+*** Variables ***
+${userName}    
+${password}    
+${url}    
+${base_url}    
 
 *** Test Cases ***
-Get Booking
-    Create User    ${url}    ${userName}    ${password}
-    ${headers}    Create Dictionary    Content-Type=${content_type}    #Header é opcional neste caso
-    ${response}    GET    url=${url}/Account/v1/User/${userId}   
-    ...    headers=${headers} 
+Test Get User ID
+    [Documentation]    Test to get User ID and print response content
+    ${body}    Create Dictionary    userName=${userName}    password=${password}
+    ${response}    POST    url=${base_url}https://bookstore.toolsqa.com/swagger/#/Account/AccountV1UserPost   json=${body}
 
-    ${response_body}    Set Variable    ${response.json()}
-    Log To Console    ${response_body}
+

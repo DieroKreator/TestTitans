@@ -1,143 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-07-10T10:30:11.777019" rpa="false" schemaversion="5">
-<suite id="s1" name="Selecionar Remover Bicicleta" source="d:\Eveclass\TestTitans - Atual\TestTitans\tests\mobile\saucedemo\selecionar_remover_bicicleta.robot">
-<test id="s1-t1" name="Selecionar e Remover Bicicleta do Carrinho" line="10">
-<kw name="Open Application" owner="AppiumLibrary">
-<msg time="2024-07-10T10:30:12.090862" level="FAIL">Variable '${REMOTE_URL}' not found.</msg>
-<arg>${REMOTE_URL}</arg>
-<arg>platformName=Android</arg>
-<arg>appium:platformVersion=9.0</arg>
-<arg>appium:deviceName=Samsung Galaxy S9 FHD GoogleAPI Emulator</arg>
-<arg>browserName=chrome</arg>
-<arg>browserVersion=126</arg>
-<arg>appium:automationName=uiautomator2</arg>
-<arg>appium:ensureWebviewsHavePages=${True}</arg>
-<arg>appium:url=https://www.saucedemo.com/</arg>
-<arg>appium:nativeWebScreenshot=${True}</arg>
-<arg>appium:newCommandTimeout=${3600}</arg>
-<arg>appium:connectHardwareKeyboard=${True}</arg>
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://appium.io/docs/en/2.1/cli/args/
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |
-| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="FAIL" start="2024-07-10T10:30:12.089863" elapsed="0.002999">Variable '${REMOTE_URL}' not found.</status>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-12T14:15:50.067574" rpa="false" schemaversion="5">
+<suite id="s1" name="Put" source="C:\Iterasys\TITANS\TestTitans-1\tests\api\put.robot">
+<test id="s1-t1" name="Test Update Book By ISBN" line="12">
+<kw name="Update Book By ISBN" owner="Put">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-07-12T14:15:50.660667" level="INFO">${body} = {'userId': '', 'isbn': ''}</msg>
+<var>${body}</var>
+<arg>userId=${userId}</arg>
+<arg>isbn=${ISBN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-07-12T14:15:50.659638" elapsed="0.001029"/>
 </kw>
-<kw name="Go To Url" owner="AppiumLibrary">
-<arg>https://www.saucedemo.com/</arg>
-<doc>Opens URL in default web browser.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.093862" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${txt_usuario}</var>
-<arg>id=user-name</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.094864" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<arg>${txt_usuario}</arg>
-<arg>standard_user</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.095862" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${txt_senha}</var>
-<arg>id=password</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.096863" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<arg>${txt_senha}</arg>
-<arg>secret_sauce</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.098871" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${btn_login}</var>
-<arg>id=login-button</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.100850" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>${btn_login}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.103474" elapsed="0.001000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${img_produto}</var>
-<arg>id=item_0_img_link</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.106475" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>${img_produto}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.108474" elapsed="0.000516"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${btn_login}</var>
-<arg>id=add-to-cart</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.108999" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>${btn_login}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.109998" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${label_titulo_card_produto}</var>
-<arg>id=back-to-products</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.111998" elapsed="0.000000"/>
-</kw>
-<kw name="Element Text Should Be" owner="AppiumLibrary">
-<arg>${label_titulo_card_produto}</arg>
-<arg>Back to products</arg>
-<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.112999" elapsed="0.001000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${carrinho}</var>
-<arg>id=shopping_cart_container</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.114999" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>${carrinho}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.116193" elapsed="0.000312"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${btn_remover}</var>
-<arg>id=remove-sauce-labs-bike-light</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.117191" elapsed="0.001001"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<arg>${btn_remover}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" start="2024-07-10T10:30:12.119192" elapsed="0.000000"/>
-</kw>
-<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2024-07-10T10:30:12.121191" level="FAIL">No application is open</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2024-07-10T10:30:12.121191" elapsed="0.002999">No application is open</status>
-</kw>
-<msg time="2024-07-10T10:30:12.125190" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg time="2024-07-10T10:30:12.128709" level="FAIL">No application is open</msg>
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="FAIL" start="2024-07-10T10:30:12.120190" elapsed="0.009519">No application is open</status>
-</kw>
-<status status="FAIL" start="2024-07-10T10:30:12.088826" elapsed="0.041405">Variable '${REMOTE_URL}' not found.
+<kw name="PUT" owner="RequestsLibrary">
+<msg time="2024-07-12T14:15:51.401142" level="INFO">PUT Request : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut 
+ path_url=/swagger/ 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '26', 'Content-Type': 'application/json'} 
+ body=b'{"userId": "", "isbn": ""}' 
+ </msg>
+<msg time="2024-07-12T14:15:51.401142" level="INFO">PUT Response : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Fri, 12 Jul 2024 17:15:52 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
+ body=
+&lt;!-- HTML for static distribution bundle build --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Swagger UI&lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css" href="./swagger-ui.css" &gt;
+  &lt;link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /&gt;&lt;link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" /&gt;
+  &lt;style&gt;
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
 
-Also teardown failed:
-No application is open</status>
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0"&gt;
+  &lt;defs&gt;
+    &lt;symbol viewBox="0 0 20 20" id="unlocked"&gt;
+      &lt;path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="locked"&gt;
+      &lt;path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="close"&gt;
+      &lt;path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="large-arrow"&gt;
+      &lt;path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="large-arrow-down"&gt;
+      &lt;path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/&gt;
+    &lt;/symbol&gt;
+
+
+    &lt;symbol viewBox="0 0 24 24" id="jump-to"&gt;
+      &lt;path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 24 24" id="expand"&gt;
+      &lt;path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/&gt;
+    &lt;/symbol&gt;
+
+  &lt;/defs&gt;
+&lt;/svg&gt;
+
+&lt;div id="swagger-ui"&gt;&lt;/div&gt;
+
+&lt;script src="./swagger-ui-bundle.js"&gt; &lt;/script&gt;
+&lt;script src="./swagger-ui-standalone-preset.js"&gt; &lt;/script&gt;
+&lt;script src="./swagger-ui-init.js"&gt; &lt;/script&gt;
+
+
+
+&lt;style&gt;
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+&lt;/style&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+ 
+ </msg>
+<msg time="2024-07-12T14:15:51.401142" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${base_url}https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut${ISBN}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a PUT request.</doc>
+<status status="PASS" start="2024-07-12T14:15:50.660667" elapsed="0.740475"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-12T14:15:51.401142" level="INFO">Response status: 200</msg>
+<arg>Response status: ${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-12T14:15:51.401142" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-12T14:15:51.401142" level="INFO">Response content: 
+&lt;!-- HTML for static distribution bundle build --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Swagger UI&lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css" href="./swagger-ui.css" &gt;
+  &lt;link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /&gt;&lt;link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" /&gt;
+  &lt;style&gt;
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0"&gt;
+  &lt;defs&gt;
+    &lt;symbol viewBox="0 0 20 20" id="unlocked"&gt;
+      &lt;path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="locked"&gt;
+      &lt;path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="close"&gt;
+      &lt;path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="large-arrow"&gt;
+      &lt;path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="large-arrow-down"&gt;
+      &lt;path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/&gt;
+    &lt;/symbol&gt;
+
+
+    &lt;symbol viewBox="0 0 24 24" id="jump-to"&gt;
+      &lt;path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 24 24" id="expand"&gt;
+      &lt;path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/&gt;
+    &lt;/symbol&gt;
+
+  &lt;/defs&gt;
+&lt;/svg&gt;
+
+&lt;div id="swagger-ui"&gt;&lt;/div&gt;
+
+&lt;script src="./swagger-ui-bundle.js"&gt; &lt;/script&gt;
+&lt;script src="./swagger-ui-standalone-preset.js"&gt; &lt;/script&gt;
+&lt;script src="./swagger-ui-init.js"&gt; &lt;/script&gt;
+
+
+
+&lt;style&gt;
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+&lt;/style&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</msg>
+<arg>Response content: ${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-12T14:15:51.401142" elapsed="0.009481"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-07-12T14:15:51.410623" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-07-12T14:15:51.410623" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${response.json()}</value>
+<status status="PASS" start="2024-07-12T14:15:51.410623" elapsed="0.000000"/>
+</return>
+<msg time="2024-07-12T14:15:51.410623" level="FAIL">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</msg>
+<var>${response}</var>
+<arg>${base_url}</arg>
+<arg>${ISBN}</arg>
+<arg>${userId}</arg>
+<status status="FAIL" start="2024-07-12T14:15:50.659638" elapsed="0.750985">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Response status: ${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-07-12T14:15:51.410623" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Response content: ${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-07-12T14:15:51.410623" elapsed="0.000000"/>
+</kw>
+<doc>Test to update book information by ISBN</doc>
+<status status="FAIL" start="2024-07-12T14:15:50.658637" elapsed="0.751986">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</status>
 </test>
-<status status="FAIL" start="2024-07-10T10:30:11.782536" elapsed="0.350688"/>
+<status status="FAIL" start="2024-07-12T14:15:50.069700" elapsed="1.340923"/>
 </suite>
 <statistics>
 <total>
@@ -146,11 +243,9 @@ No application is open</status>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Selecionar Remover Bicicleta">Selecionar Remover Bicicleta</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Put">Put</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-07-10T10:30:12.084266" level="ERROR">Error in file 'd:\Eveclass\TestTitans - Atual\TestTitans\tests\mobile\saucedemo\selecionar_remover_bicicleta.robot' on line 7: Setting variable '${REMOTE_URL}' failed: Environment variable '%{SAUCE_ACCESS_KEY}' not found.</msg>
-<msg time="2024-07-10T10:30:12.125190" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
