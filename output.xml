@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-12T14:15:50.067574" rpa="false" schemaversion="5">
-<suite id="s1" name="Put" source="C:\Iterasys\TITANS\TestTitans-1\tests\api\put.robot">
-<test id="s1-t1" name="Test Update Book By ISBN" line="12">
-<kw name="Update Book By ISBN" owner="Put">
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-13T00:16:02.986663" rpa="false" schemaversion="5">
+<suite id="s1" name="Post Books" source="c:\Iterasys\TestTitans\tests\api\post_books.robot">
+<test id="s1-t1" name="Test addListOfBooks" line="12">
+<kw name="addListOfBooks" owner="post_books">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-07-12T14:15:50.660667" level="INFO">${body} = {'userId': '', 'isbn': ''}</msg>
+<msg time="2024-07-13T00:16:03.208275" level="INFO">${body} = {'userId': '', 'isbn': ''}</msg>
 <var>${body}</var>
 <arg>userId=${userId}</arg>
 <arg>isbn=${ISBN}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-07-12T14:15:50.659638" elapsed="0.001029"/>
+<status status="PASS" start="2024-07-13T00:16:03.208275" elapsed="0.000000"/>
 </kw>
-<kw name="PUT" owner="RequestsLibrary">
-<msg time="2024-07-12T14:15:51.401142" level="INFO">PUT Request : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut 
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2024-07-13T00:16:04.697967" level="INFO">POST Request : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksPost 
  path_url=/swagger/ 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '26', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '26', 'Content-Type': 'application/json'} 
  body=b'{"userId": "", "isbn": ""}' 
  </msg>
-<msg time="2024-07-12T14:15:51.401142" level="INFO">PUT Response : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut 
+<msg time="2024-07-13T00:16:04.697967" level="INFO">POST Response : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksPost 
  status=200, reason=OK 
- headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Fri, 12 Jul 2024 17:15:52 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Sat, 13 Jul 2024 03:16:04 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
  body=
 &lt;!-- HTML for static distribution bundle build --&gt;
 &lt;!DOCTYPE html&gt;
@@ -102,21 +102,21 @@
 &lt;/html&gt;
  
  </msg>
-<msg time="2024-07-12T14:15:51.401142" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-07-13T00:16:04.697967" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>url=${base_url}https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut${ISBN}</arg>
+<arg>url=${base_url}https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksPost${ISBN}</arg>
 <arg>json=${body}</arg>
-<doc>Sends a PUT request.</doc>
-<status status="PASS" start="2024-07-12T14:15:50.660667" elapsed="0.740475"/>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2024-07-13T00:16:03.208275" elapsed="1.489692"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-07-12T14:15:51.401142" level="INFO">Response status: 200</msg>
+<msg time="2024-07-13T00:16:04.697967" level="INFO">Response status: 200</msg>
 <arg>Response status: ${response.status_code}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-12T14:15:51.401142" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-13T00:16:04.697967" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-07-12T14:15:51.401142" level="INFO">Response content: 
+<msg time="2024-07-13T00:16:04.697967" level="INFO">Response content: 
 &lt;!-- HTML for static distribution bundle build --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -199,42 +199,42 @@
 </msg>
 <arg>Response content: ${response.content}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-12T14:15:51.401142" elapsed="0.009481"/>
+<status status="PASS" start="2024-07-13T00:16:04.697967" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2024-07-12T14:15:51.410623" level="INFO">Argument types are:
+<msg time="2024-07-13T00:16:04.697967" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-07-12T14:15:51.410623" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-13T00:16:04.697967" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${response.json()}</value>
-<status status="PASS" start="2024-07-12T14:15:51.410623" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-13T00:16:04.697967" elapsed="0.000000"/>
 </return>
-<msg time="2024-07-12T14:15:51.410623" level="FAIL">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</msg>
+<msg time="2024-07-13T00:16:04.697967" level="FAIL">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</msg>
 <var>${response}</var>
 <arg>${base_url}</arg>
-<arg>${ISBN}</arg>
 <arg>${userId}</arg>
-<status status="FAIL" start="2024-07-12T14:15:50.659638" elapsed="0.750985">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</status>
+<arg>${ISBN}</arg>
+<status status="FAIL" start="2024-07-13T00:16:03.195764" elapsed="1.502203">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</status>
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>Response status: ${response.status_code}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-07-12T14:15:51.410623" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-07-13T00:16:04.708773" elapsed="0.000000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>Response content: ${response}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-07-12T14:15:51.410623" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-07-13T00:16:04.709361" elapsed="0.000000"/>
 </kw>
-<doc>Test to update book information by ISBN</doc>
-<status status="FAIL" start="2024-07-12T14:15:50.658637" elapsed="0.751986">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</status>
+<doc>Test to post a list of books</doc>
+<status status="FAIL" start="2024-07-13T00:16:03.195764" elapsed="1.513597">Replacing variables from keyword return value failed: Resolving variable '${response.json()}' failed: JSONDecodeError: Expecting value: line 2 column 1 (char 1)</status>
 </test>
-<status status="FAIL" start="2024-07-12T14:15:50.069700" elapsed="1.340923"/>
+<status status="FAIL" start="2024-07-13T00:16:03.001003" elapsed="1.708358"/>
 </suite>
 <statistics>
 <total>
@@ -243,7 +243,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Put">Put</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Post Books">Post Books</stat>
 </suite>
 </statistics>
 <errors>
