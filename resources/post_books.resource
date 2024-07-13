@@ -3,9 +3,9 @@ Library    RequestsLibrary
 
 *** Keywords ***
 addListOfBooks
-    [Arguments]    ${base_url}    ${userId}    ${ISBN}
+    [Arguments]    ${userId}    ${ISBN}
     ${body}    Create Dictionary    userId=${userId}    isbn=${ISBN}
-    ${response}    POST    url=${base_url}https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksPost${ISBN}    json=${body}
+    ${response}    POST    url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksPost    json=${body}
     Log    Response status: ${response.status_code}
     Log    Response content: ${response.content}
     Should Be Equal As Strings    ${response.status_code}    200

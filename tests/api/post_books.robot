@@ -11,7 +11,7 @@ ${userId}
 *** Test Cases ***
 Test addListOfBooks
     [Documentation]    Test to post a list of books
-    ${response}    addListOfBooks    ${base_url}    ${userId}    ${ISBN}
+    ${response}    addListOfBooks    ${userId}    ${ISBN}
     Log    Response status: ${response.status_code}
     Log    Response content: ${response}
 
