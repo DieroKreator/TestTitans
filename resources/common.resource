@@ -48,4 +48,3 @@ Steps
     Create User    ${url}    ${userName}    ${password}
     Create Bearer    ${url}    ${userName}    ${password}
     Create Authentication    ${url}    ${userName}    ${password}
-

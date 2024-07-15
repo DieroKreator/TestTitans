@@ -1,4 +1,17 @@
 {
-    "userId": "12345",
-    "ISBN": "9781449325862"
-  }
+  "userId": "12345",
+  "username": "Saulo",
+  "books": [
+    {
+      "isbn": "9781449325862",
+      "title": "ELI",
+      "subTitle": "Rodolfo",
+      "author": "Rodolfo",
+      "publish_date": "2024-07-14T04:00:17.682Z",
+      "publisher": "nova",
+      "pages": 0,
+      "description": "sem",
+      "website": "https://bookstore.toolsqa.com/swagger/"
+    }
+  ]
+}
