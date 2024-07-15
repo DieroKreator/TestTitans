@@ -1,4 +1,4 @@
-url = 'https://bookstore.toolsqa.com/swagger/#/Account/AccountV1UserPost'
+url = 'https://bookstore.toolsqa.com'
 content_type = 'application/json'
-userName = 'Helena'
-password = '@Password123'
+userName = 'Nety'
+password = '@Password1234'

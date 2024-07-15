@@ -1,88 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-15T12:49:13.379443" rpa="false" schemaversion="5">
-<suite id="s1" name="Put" source="c:\Iterasys\TITANS\TestTitans-1\tests\api\put.robot">
-<test id="s1-t1" name=" ISBN" line="16">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-15T12:49:14.051605" level="INFO">New Title: New Book Title</msg>
-<arg>New Title: ${new_title}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.051605" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-15T12:49:14.051605" level="INFO">Valid Book ID: 12345</msg>
-<arg>Valid Book ID: ${valid_book_id}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.051605" elapsed="0.000000"/>
-</kw>
-<kw name="Update Book Title" owner="Put">
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-07-15T14:35:24.003254" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Get Book" source="d:\Eveclass\TestTitans - Atual\TestTitans\tests\api\test_get_book.robot">
+<test id="s1-t1" name="Get Single Book" line="8">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-07-15T12:49:14.051605" level="INFO">Creating Session using : alias=mysession, url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>${session}</arg>
-<arg>${base_url}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-07-15T12:49:14.051605" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-07-15T12:49:14.067193" level="INFO">${body} = {'title': 'New Book Title'}</msg>
-<var>${body}</var>
-<arg>title=${title}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.067193" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-07-15T12:49:14.067193" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
-<var>${headers}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.067193" elapsed="0.000000"/>
-</kw>
-<kw name="PUT On Session" owner="RequestsLibrary">
-<msg time="2024-07-15T12:49:14.919916" level="INFO">PUT Request : url=https://bookstore.toolsqa.com/swagger/BookStore/v1/Books/12345 
- path_url=/swagger/BookStore/v1/Books/12345 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '27'} 
- body=b'{"title": "New Book Title"}' 
- </msg>
-<msg time="2024-07-15T12:49:14.919916" level="INFO">PUT Response : url=https://bookstore.toolsqa.com/swagger/BookStore/v1/Books/12345 
- status=200, reason=OK 
- headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Mon, 15 Jul 2024 15:49:14 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
-=======
-<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-14T00:13:20.575824" rpa="false" schemaversion="5">
-<suite id="s1" name="Post Books" source="c:\Iterasys\TestTitans\tests\api\post_books.robot">
-<test id="s1-t1" name="Send POST Request With JSON" line="8">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-07-14T00:13:20.863756" level="INFO">Creating Session using : alias=mysession, url=https://bookstore.toolsqa.com/BookStore/v1/Books, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>mysession</arg>
+<msg time="2024-07-15T14:35:24.166325" level="INFO">Creating Session using : alias=bookstore, url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BookGet, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>bookstore</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-07-14T00:13:20.863756" elapsed="0.006204"/>
+<status status="PASS" start="2024-07-15T14:35:24.166325" elapsed="0.003001"/>
 </kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-07-14T00:13:20.869960" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
-<var>${headers}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-07-14T00:13:20.869960" elapsed="0.000000"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-15T14:35:24.170333" level="INFO">${isbn} = 9781449325862</msg>
+<var>${isbn}</var>
+<arg>9781449325862</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-15T14:35:24.170333" elapsed="0.000000"/>
 </kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-07-14T00:13:20.869960" level="INFO">${data} = {'userId': '66bd73e6-1941-4d00-91b5-536e647f822c', 'collectionOfIsbns': '[{"isbn": "9781449331818"}]'}</msg>
-<var>${data}</var>
-<arg>userId=66bd73e6-1941-4d00-91b5-536e647f822c</arg>
-<arg>collectionOfIsbns=[{"isbn": "9781449331818"}]</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-07-14T00:13:20.869960" elapsed="0.000000"/>
-</kw>
-<kw name="Post Request" owner="RequestsLibrary">
-<msg time="2024-07-14T00:13:20.869960" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
-<msg time="2024-07-14T00:13:22.520830" level="INFO">POST Request : url=https://bookstore.toolsqa.com/BookStore/v1/Books/BookStore/v1/Books (redirected) 
- path_url=/BookStore/v1/Books/BookStore/v1/Books 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '106'} 
- body=b'{"userId": "66bd73e6-1941-4d00-91b5-536e647f822c", "collectionOfIsbns": "[{\\"isbn\\": \\"9781449331818\\"}]"}' 
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-07-15T14:35:25.198462" level="INFO">GET Request : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BookGet/9781449325862 
+ path_url=/swagger/ 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
  </msg>
-<msg time="2024-07-14T00:13:22.528833" level="INFO">GET Response : url=https://bookstore.toolsqa.com/swagger/ 
+<msg time="2024-07-15T14:35:25.198462" level="INFO">GET Response : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BookGet/9781449325862 
  status=200, reason=OK 
- headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Sun, 14 Jul 2024 03:13:22 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
->>>>>>> 0df8d41d1db452d13eafe4fbe06c0c19ce65e5c2
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Mon, 15 Jul 2024 17:35:28 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
  body=
 &lt;!-- HTML for static distribution bundle build --&gt;
 &lt;!DOCTYPE html&gt;
@@ -165,187 +107,21 @@
 &lt;/html&gt;
  
  </msg>
-<<<<<<< HEAD
-<msg time="2024-07-15T12:49:14.919916" level="INFO">c:\Iterasys\TITANS\TestTitans-1\.venv\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'bookstore.toolsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(</msg>
-<msg time="2024-07-15T12:49:14.919916" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-07-15T14:35:25.198462" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>${session}</arg>
-<arg>/BookStore/v1/Books/${book_id}</arg>
-<arg>json=${body}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a PUT request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.067193" elapsed="0.852723"/>
+<arg>${BASE_URL}/${isbn}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-07-15T14:35:24.172336" elapsed="1.027124"/>
 </kw>
-<return>
-<value>${response}</value>
-<status status="PASS" start="2024-07-15T12:49:14.919916" elapsed="0.000000"/>
-</return>
-<msg time="2024-07-15T12:49:14.919916" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>${valid_book_id}</arg>
-<arg>${new_title}</arg>
-<status status="PASS" start="2024-07-15T12:49:14.051605" elapsed="0.868311"/>
-</kw>
-<kw name="Verify Update Response" owner="Put">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-07-15T12:49:14.919916" level="INFO">${status_code} = 200</msg>
-<var>${status_code}</var>
-<arg>${response.status_code}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.919916" elapsed="0.015292"/>
-</kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-07-15T12:49:14.936206" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${status_code}</arg>
-<arg>${expected_status}</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.936206" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-07-15T12:49:14.936206" level="INFO">${content_type} = text/html; charset=utf-8</msg>
-<var>${content_type}</var>
-<arg>${response.headers['Content-Type']}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.936206" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-15T12:49:14.936206" level="INFO">Response is not JSON: 
-&lt;!-- HTML for static distribution bundle build --&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;title&gt;Swagger UI&lt;/title&gt;
-  &lt;link rel="stylesheet" type="text/css" href="./swagger-ui.css" &gt;
-  &lt;link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /&gt;&lt;link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" /&gt;
-  &lt;style&gt;
-    html
-    {
-      box-sizing: border-box;
-      overflow: -moz-scrollbars-vertical;
-      overflow-y: scroll;
-    }
-    *,
-    *:before,
-    *:after
-    {
-      box-sizing: inherit;
-    }
-
-    body {
-      margin:0;
-      background: #fafafa;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0"&gt;
-  &lt;defs&gt;
-    &lt;symbol viewBox="0 0 20 20" id="unlocked"&gt;
-      &lt;path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"&gt;&lt;/path&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 20 20" id="locked"&gt;
-      &lt;path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 20 20" id="close"&gt;
-      &lt;path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 20 20" id="large-arrow"&gt;
-      &lt;path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 20 20" id="large-arrow-down"&gt;
-      &lt;path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/&gt;
-    &lt;/symbol&gt;
-
-
-    &lt;symbol viewBox="0 0 24 24" id="jump-to"&gt;
-      &lt;path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/&gt;
-    &lt;/symbol&gt;
-
-    &lt;symbol viewBox="0 0 24 24" id="expand"&gt;
-      &lt;path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/&gt;
-    &lt;/symbol&gt;
-
-  &lt;/defs&gt;
-&lt;/svg&gt;
-
-&lt;div id="swagger-ui"&gt;&lt;/div&gt;
-
-&lt;script src="./swagger-ui-bundle.js"&gt; &lt;/script&gt;
-&lt;script src="./swagger-ui-standalone-preset.js"&gt; &lt;/script&gt;
-&lt;script src="./swagger-ui-init.js"&gt; &lt;/script&gt;
-
-
-
-&lt;style&gt;
-  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
-&lt;/style&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
-</msg>
-<arg>Response is not JSON: ${response.content}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.936206" elapsed="0.008165"/>
-</kw>
-<arg>'${content_type}' == 'application/json'</arg>
-<arg>Evaluate JSON Response</arg>
-<arg>${response}</arg>
-<arg>${expected_title}</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>Response is not JSON: ${response.content}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-07-15T12:49:14.936206" elapsed="0.008165"/>
-</kw>
-<arg>${response}</arg>
+<kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
-<arg>${new_title}</arg>
-<status status="PASS" start="2024-07-15T12:49:14.919916" elapsed="0.024455"/>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-07-15T14:35:25.199460" elapsed="0.001005"/>
 </kw>
-<status status="PASS" start="2024-07-15T12:49:14.051605" elapsed="0.893763"/>
+<doc>Teste para obter um único livro pelo ISBN</doc>
+<status status="PASS" start="2024-07-15T14:35:24.165326" elapsed="1.035139"/>
 </test>
-<status status="PASS" start="2024-07-15T12:49:13.384802" elapsed="1.561389"/>
-=======
-<msg time="2024-07-14T00:13:22.528833" level="INFO">C:\Users\arthu\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'bookstore.toolsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-C:\Users\arthu\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'bookstore.toolsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-C:\Users\arthu\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'bookstore.toolsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(</msg>
-<msg time="2024-07-14T00:13:22.528833" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/BookStore/v1/Books</arg>
-<arg>headers=${headers}</arg>
-<arg>json=${data}</arg>
-<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
-<status status="PASS" start="2024-07-14T00:13:20.869960" elapsed="1.662690"/>
-</kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-07-14T00:13:22.532650" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${response.status_code}</arg>
-<arg>200</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-07-14T00:13:22.532650" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-07-14T00:13:20.863756" elapsed="1.668894"/>
-</test>
-<status status="PASS" start="2024-07-14T00:13:20.592584" elapsed="1.945630"/>
->>>>>>> 0df8d41d1db452d13eafe4fbe06c0c19ce65e5c2
+<status status="PASS" start="2024-07-15T14:35:24.009570" elapsed="1.192876"/>
 </suite>
 <statistics>
 <total>
@@ -354,21 +130,9 @@ C:\Users\arthu\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3
 <tag>
 </tag>
 <suite>
-<<<<<<< HEAD
-<stat pass="1" fail="0" skip="0" id="s1" name="Put">Put</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Get Book">Test Get Book</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-07-15T12:49:13.413167" level="WARN">Error in file 'c:\Iterasys\TITANS\TestTitans-1\resources\Put.resource' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2024-07-15T12:49:13.414134" level="WARN">Error in file 'c:\Iterasys\TITANS\TestTitans-1\resources\Put.resource' on line 23: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2024-07-15T12:49:13.415132" level="WARN">Error in file 'c:\Iterasys\TITANS\TestTitans-1\resources\Put.resource' on line 31: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2024-07-15T12:49:14.051605" level="ERROR">Error in file 'c:\Iterasys\TITANS\TestTitans-1\tests\api\put.robot' on line 3: Resource setting requires value.</msg>
-=======
-<stat pass="1" fail="0" skip="0" id="s1" name="Post Books">Post Books</stat>
-</suite>
-</statistics>
-<errors>
-<msg time="2024-07-14T00:13:20.869960" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
->>>>>>> 0df8d41d1db452d13eafe4fbe06c0c19ce65e5c2
 </errors>
 </robot>

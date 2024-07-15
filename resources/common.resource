@@ -3,48 +3,41 @@ Library    RequestsLibrary
 
 *** Keywords ***
 Create User
-    [Arguments]    ${base_url}    ${userName}    ${password}
+    [Arguments]    ${url}    ${userName}    ${password}
     ${body}    Create Dictionary    userName=${userName}    password=${password}
-    ${response}    POST    url=${base_url}https://bookstore.toolsqa.com/swagger/#/Account/AccountV1UserPost   json=${body}
-    [Return]    ${response}
 
-    Status Should Be    200
+    ${response}    POST    url=${url}/Account/v1/User    json=${body}       
 
-    ${response_body}=    Evaluate    json.loads('''${response.content}''')    json
-    Log To Console    ${response_body}
-
-    Should Be Equal    ${response_body['username']}    ${userName}
-
-    ${userId}    Set Variable    ${response_body['userId']}
-    Set Suite Variable    ${userId}
-    Log To Console    ${userId}
+    Status Should Be    201    # Validações
+    ${userID}    Set Variable    ${response.json()}[userID]
+    Set Suite Variable    ${userID}
+    Log to Console    ${userID}
 
 Create Bearer
     [Arguments]    ${url}    ${userName}    ${password}
-    ${body}    Create Dictionary    username=${userName}    password=${password}
+
+    ${body}    Create Dictionary    userName=${userName}    password=${password}
     ${response}    POST    url=${url}/Account/v1/GenerateToken    json=${body}
 
     Status Should Be    200
+    ${bearer}    Set Variable    ${response.json()}[token]
+    Set Suite Variable    ${bearer} 
+    Log to Console    ${bearer}
 
-    ${response_body}=    Evaluate    json.loads('''${response.content}''')    json
-    ${bearer}    Set Variable    ${response_body['token']}
-    Set Suite Variable    ${bearer}
-    Log To Console    ${bearer}
-
-Create Authentication
+Create Authorized
     [Arguments]    ${url}    ${userName}    ${password}
-    ${body}    Create Dictionary    username=${userName}    password=${password}
+
+    ${body}    Create Dictionary    userName=${userName}    password=${password}
     ${response}    POST    url=${url}/Account/v1/Authorized    json=${body}
 
-    Status Should Be    200
-
-    ${response_body}=    Evaluate    json.loads('''${response.content}''')    json
+    ${response_body}    Set Variable    ${response.json()}
     Log To Console    ${response_body}
 
-    Should Be Equal    ${response_body}    true
+    Status Should Be    200
+    Should Be Equal    ${response_body}    ${{bool(True)}}
 
 Steps
     [Arguments]    ${url}    ${userName}    ${password}
     Create User    ${url}    ${userName}    ${password}
-    Create Bearer    ${url}    ${userName}    ${password}
-    Create Authentication    ${url}    ${userName}    ${password}
+    Create Bearer    ${url}   ${userName}    ${password}
+    Create Authorized    ${url}    ${userName}    ${password}
