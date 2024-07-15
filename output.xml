@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-15T12:49:13.379443" rpa="false" schemaversion="5">
 <suite id="s1" name="Put" source="c:\Iterasys\TITANS\TestTitans-1\tests\api\put.robot">
 <test id="s1-t1" name=" ISBN" line="16">
@@ -45,6 +46,43 @@
 <msg time="2024-07-15T12:49:14.919916" level="INFO">PUT Response : url=https://bookstore.toolsqa.com/swagger/BookStore/v1/Books/12345 
  status=200, reason=OK 
  headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Mon, 15 Jul 2024 15:49:14 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
+=======
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-14T00:13:20.575824" rpa="false" schemaversion="5">
+<suite id="s1" name="Post Books" source="c:\Iterasys\TestTitans\tests\api\post_books.robot">
+<test id="s1-t1" name="Send POST Request With JSON" line="8">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-07-14T00:13:20.863756" level="INFO">Creating Session using : alias=mysession, url=https://bookstore.toolsqa.com/BookStore/v1/Books, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-07-14T00:13:20.863756" elapsed="0.006204"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-07-14T00:13:20.869960" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-07-14T00:13:20.869960" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-07-14T00:13:20.869960" level="INFO">${data} = {'userId': '66bd73e6-1941-4d00-91b5-536e647f822c', 'collectionOfIsbns': '[{"isbn": "9781449331818"}]'}</msg>
+<var>${data}</var>
+<arg>userId=66bd73e6-1941-4d00-91b5-536e647f822c</arg>
+<arg>collectionOfIsbns=[{"isbn": "9781449331818"}]</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-07-14T00:13:20.869960" elapsed="0.000000"/>
+</kw>
+<kw name="Post Request" owner="RequestsLibrary">
+<msg time="2024-07-14T00:13:20.869960" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg time="2024-07-14T00:13:22.520830" level="INFO">POST Request : url=https://bookstore.toolsqa.com/BookStore/v1/Books/BookStore/v1/Books (redirected) 
+ path_url=/BookStore/v1/Books/BookStore/v1/Books 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '106'} 
+ body=b'{"userId": "66bd73e6-1941-4d00-91b5-536e647f822c", "collectionOfIsbns": "[{\\"isbn\\": \\"9781449331818\\"}]"}' 
+ </msg>
+<msg time="2024-07-14T00:13:22.528833" level="INFO">GET Response : url=https://bookstore.toolsqa.com/swagger/ 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Sun, 14 Jul 2024 03:13:22 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
+>>>>>>> 0df8d41d1db452d13eafe4fbe06c0c19ce65e5c2
  body=
 &lt;!-- HTML for static distribution bundle build --&gt;
 &lt;!DOCTYPE html&gt;
@@ -127,6 +165,7 @@
 &lt;/html&gt;
  
  </msg>
+<<<<<<< HEAD
 <msg time="2024-07-15T12:49:14.919916" level="INFO">c:\Iterasys\TITANS\TestTitans-1\.venv\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'bookstore.toolsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
 <msg time="2024-07-15T12:49:14.919916" level="INFO">${response} = &lt;Response [200]&gt;</msg>
@@ -278,6 +317,35 @@
 <status status="PASS" start="2024-07-15T12:49:14.051605" elapsed="0.893763"/>
 </test>
 <status status="PASS" start="2024-07-15T12:49:13.384802" elapsed="1.561389"/>
+=======
+<msg time="2024-07-14T00:13:22.528833" level="INFO">C:\Users\arthu\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'bookstore.toolsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\arthu\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'bookstore.toolsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\arthu\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'bookstore.toolsqa.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-07-14T00:13:22.528833" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/BookStore/v1/Books</arg>
+<arg>headers=${headers}</arg>
+<arg>json=${data}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<status status="PASS" start="2024-07-14T00:13:20.869960" elapsed="1.662690"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-07-14T00:13:22.532650" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-14T00:13:22.532650" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-14T00:13:20.863756" elapsed="1.668894"/>
+</test>
+<status status="PASS" start="2024-07-14T00:13:20.592584" elapsed="1.945630"/>
+>>>>>>> 0df8d41d1db452d13eafe4fbe06c0c19ce65e5c2
 </suite>
 <statistics>
 <total>
@@ -286,6 +354,7 @@
 <tag>
 </tag>
 <suite>
+<<<<<<< HEAD
 <stat pass="1" fail="0" skip="0" id="s1" name="Put">Put</stat>
 </suite>
 </statistics>
@@ -294,5 +363,12 @@
 <msg time="2024-07-15T12:49:13.414134" level="WARN">Error in file 'c:\Iterasys\TITANS\TestTitans-1\resources\Put.resource' on line 23: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 <msg time="2024-07-15T12:49:13.415132" level="WARN">Error in file 'c:\Iterasys\TITANS\TestTitans-1\resources\Put.resource' on line 31: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 <msg time="2024-07-15T12:49:14.051605" level="ERROR">Error in file 'c:\Iterasys\TITANS\TestTitans-1\tests\api\put.robot' on line 3: Resource setting requires value.</msg>
+=======
+<stat pass="1" fail="0" skip="0" id="s1" name="Post Books">Post Books</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-14T00:13:20.869960" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+>>>>>>> 0df8d41d1db452d13eafe4fbe06c0c19ce65e5c2
 </errors>
 </robot>

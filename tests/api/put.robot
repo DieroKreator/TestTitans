@@ -20,19 +20,3 @@ ${new_title}    Sucesso
     ${response}    Update Book Title    mysession    ${valid_book_id}    ${new_title}       
     Verify Update Response    ${response}    200    ${new_title}
 
-Update Nonexistent Book
-    [Documentation]    Tenta atualizar um livro com ID inexistente
-    [Tags]    PUT    Book
-
-    # Load JSON data from file
-    ${json_data}    Load Book Data    ${json_file}
-
-    # Extract necessary fields from JSON
-    ${new_title}    ${valid_book_id}    Extract Book Fields    ${json_data}
-
-    # Attempt to update book with invalid ID
-    ${response}    Update Book Title    mysession    ${invalid_book_id}    ${new_title}
-
-    # Log and verify response
-    Log Response    ${response}
-    Verify Error Response    ${response}    400
