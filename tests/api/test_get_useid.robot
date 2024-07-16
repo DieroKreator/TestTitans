@@ -9,11 +9,10 @@ Suite Setup    Steps    ${url}    ${userName}    ${password}
 
 Get UserId
     Create User    ${url}    ${userName}    ${password}
-    ${headers}    Create Dictionary    Content-Type=${content_type}    #Header é opcional neste caso
-    ${response}    GET    url=${url}/Account/v1/User/${UserID}
-    ...    headers=${headers} 
+    ${headers}    Create Dictionary    Authorization=Bearer ${bearer}
+    ${response}    GET    url=${url}/Account/v1/User/${userID}    headers=${headers}
 
     ${response_body}    Set Variable    ${response.json}
     Log To Console    ${response_body}
 
-
+    Status Should Be    200
