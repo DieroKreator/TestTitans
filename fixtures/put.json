@@ -3,7 +3,7 @@
   "username": "Saulo",
   "books": [
     {
-      "isbn": "9781449325862",
+      "isbn": "978144932586",
       "title": "ELI",
       "subTitle": "Rodolfo",
       "author": "Rodolfo",
@@ -11,7 +11,7 @@
       "publisher": "nova",
       "pages": 0,
       "description": "sem",
-      "website": "https://bookstore.toolsqa.com/swagger/"
+      "url":  "https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut"
     }
   ]
 }

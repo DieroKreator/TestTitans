@@ -1,22 +1,14 @@
 *** Settings ***
-Resource    ../../../resources/Put.resource
-Resource   
+Library        RequestsLibrary
+Library    OperatingSystem
+Resource       ../../resources/put.resource
 
-*** Variables ***
-${new_title}    New Book Title    
-${valid_book_id}    12345    
-${invalid_book_id}    67890  
-${base_url}    https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut
-${json_data}    024-07-13T01:40:11.131Z
-${new_title}    Sucesso   	
-
-
-
-*** Test Cases ***
- ISBN  
-    Log    New Title: ${new_title}
-    Log    Valid Book ID: ${valid_book_id}
-
-    ${response}    Update Book Title    mysession    ${valid_book_id}    ${new_title}       
-    Verify Update Response    ${response}    200    ${new_title}
-
+    
+**** Test Cases ***
+Testar Detalhes do Livro
+    [Documentation]    Verifica se os detalhes do livro são corretos
+    Verify Book Details    ${expected_isbn}    ${expected_title}    ${expected_author}    
+    ...    ${expected_pages}    ${expected_publisher}    ${expected_id}    ${expect_username}   
+    Verificar Descrição ISBN
+    Verificar Mensagem de Erro 400
+    Verificar Mensagem de Erro 401
