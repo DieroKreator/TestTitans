@@ -1,5 +1,6 @@
-url = 'https://bookstore.toolsqa.com/swagger/#/Account/AccountV1UserPost'
+url = 'https://bookstore.toolsqa.com'
 content_type = 'application/json'
+<<<<<<< HEAD
 userName = 'Helena'
 password = '@Password123'
 
@@ -12,3 +13,7 @@ title=  'ELI'
 expected_author=    'Rodolfo'
 publisher= 'Moura'
 expected_pages= '0'
+=======
+userName = 'Nety'
+password = '@Password1234'
+>>>>>>> 08f93fbfb2d77a443438e436554dd06e69a37afa
