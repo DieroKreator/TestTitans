@@ -1,8 +1,8 @@
 *** Settings ***
 Library        RequestsLibrary
 Library    OperatingSystem
-Resource       ../../resources/common.resource
-Variables      ../../resources/variables.py
+Resource       ../../../resources/common.resource
+Variables      ../../../resources/variables.py
 Suite Setup    Steps    ${url}    ${userName}    ${password}
 
 *** Test Cases ***
