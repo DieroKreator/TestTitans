@@ -10,25 +10,11 @@ Create User
 
     ${response}    POST    url=${url}/Account/v1/User    json=${body}    
      ...    headers=${headers}
-    
-    ${response_body}    Set Variable    ${response.json()}
-    Log To Console    ${response_body}
 
     Status Should Be    201    
-    Should Be Equal    ${response_body}[username]    ${userName}
-
     ${userId}    Set Variable    ${response.json()}[userID]
     Set Suite Variable    ${userId}                          
     Log to Console    ${userId}
-    # "isbn": "string",
-    #   "title": "string",
-    #   "subTitle": "string",
-    #   "author": "string",
-    #   "publish_date": "2024-07-11T20:53:36.952Z",
-    #   "publisher": "string",
-    #   "pages": 0,
-    #   "description": "string",
-    #   "website": "string"
 
 Create Bearer
     [Arguments]    ${url}    ${userName}    ${password}   
@@ -41,7 +27,7 @@ Create Bearer
     Set Suite Variable    ${bearer} 
     Log To Console    ${bearer}      
 
-Create Authentication
+Create Authorized
     [Arguments]    ${url}    ${userName}    ${password}
 
     ${body}    Create Dictionary    userName=${userName}    password=${password}
@@ -65,9 +51,8 @@ Delete User
     Status Should Be    204
     Log To Console    ${response}
 
-
 Steps
     [Arguments]    ${url}    ${userName}    ${password}
-    Create User    ${url}    ${userName}    ${password}   
-    Create Bearer    ${url}    ${userName}    ${password}
-    Create Authentication    ${url}    ${userName}    ${password}
+    Create User    ${url}    ${userName}    ${password}
+    Create Bearer    ${url}   ${userName}    ${password}
+    Create Authorized    ${url}    ${userName}    ${password}

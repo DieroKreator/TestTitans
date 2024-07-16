@@ -1,0 +1,17 @@
+{
+  "userId": "12345",
+  "username": "Saulo",
+  "books": [
+    {
+      "isbn": "978144932586",
+      "title": "ELI",
+      "subTitle": "Rodolfo",
+      "author": "Rodolfo",
+      "publish_date": "2024-07-14T04:00:17.682Z",
+      "publisher": "nova",
+      "pages": 0,
+      "description": "sem",
+      "url":  "https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksByISBNPut"
+    }
+  ]
+}
