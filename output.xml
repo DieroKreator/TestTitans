@@ -1,98 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-15T22:04:56.981956" rpa="false" schemaversion="5">
-<suite id="s1" name="Put" source="c:\Iterasys\TITANS\TestTitans-1\tests\api\put.robot">
-<test id="s1-t1" name="Testar Detalhes do Livro" line="8">
-<kw name="Verify Book Details" owner="put">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-07-15T22:04:57.680437" level="INFO">${book_details} = {'isbn': '978144932586', 'title': 'Eli', 'author': 'Rodolfo', 'pages': '0', 'publisher': 'Moura', 'id': '12345', 'username': 'Rodolfo'}</msg>
-<var>${book_details}</var>
-<arg>isbn=${expected_isbn}</arg>
-<arg>title=${expected_title}</arg>
-<arg>author=${expected_author}</arg>
-<arg>pages=${expected_pages}</arg>
-<arg>publisher=${expected_publisher}</arg>
-<arg>id=${expected_id}</arg>
-<arg>username=${expect_username}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-07-15T22:04:57.664851" elapsed="0.015586"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-15T22:04:57.680437" level="INFO">Book details verified successfully.</msg>
-<arg>Book details verified successfully.</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-15T22:04:57.680437" elapsed="0.000000"/>
-</kw>
-<arg>${expected_isbn}</arg>
-<arg>${expected_title}</arg>
-<arg>${expected_author}</arg>
-<arg>${expected_pages}</arg>
-<arg>${expected_publisher}</arg>
-<arg>${expected_id}</arg>
-<arg>${expect_username}</arg>
-<status status="PASS" start="2024-07-15T22:04:57.664851" elapsed="0.015586"/>
-</kw>
-<kw name="Verificar Descrição ISBN" owner="put">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-15T22:04:57.680437" level="INFO">Verifying ISBN description...</msg>
-<arg>Verifying ISBN description...</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-15T22:04:57.680437" elapsed="0.000000"/>
-</kw>
-<doc>Verifica a descrição do ISBN</doc>
-<status status="PASS" start="2024-07-15T22:04:57.680437" elapsed="0.000000"/>
-</kw>
-<kw name="Verificar Mensagem de Erro 400" owner="put">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-15T22:04:57.680437" level="INFO">Verifying error message for status 400: Erro</msg>
-<arg>Verifying error message for status 400: Erro</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-15T22:04:57.680437" elapsed="0.000000"/>
-</kw>
-<doc>Verifies the error message for status 400</doc>
-<status status="PASS" start="2024-07-15T22:04:57.680437" elapsed="0.000000"/>
-</kw>
-<kw name="Verificar Mensagem de Erro 401" owner="put">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-07-15T22:04:57.680437" level="INFO">Verifying error message for status 401: Não autorizado</msg>
-<arg>Verifying error message for status 401: Não autorizado</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-07-15T22:04:57.680437" elapsed="0.000000"/>
-</kw>
-<doc>Verifies the error message for status 401</doc>
-<status status="PASS" start="2024-07-15T22:04:57.680437" elapsed="0.000000"/>
-</kw>
-<doc>Verifica se os detalhes do livro são corretos</doc>
-<status status="PASS" start="2024-07-15T22:04:57.664851" elapsed="0.015586"/>
-</test>
-<status status="PASS" start="2024-07-15T22:04:56.992280" elapsed="0.688157"/>
-=======
-<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-07-15T14:35:24.003254" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Get Book" source="d:\Eveclass\TestTitans - Atual\TestTitans\tests\api\test_get_book.robot">
-<test id="s1-t1" name="Get Single Book" line="8">
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-16T16:38:20.533282" rpa="false" schemaversion="5">
+<suite id="s1" name="Post Books" source="c:\Iterasys\TestTitans\tests\api\post_books.robot">
+<test id="s1-t1" name="Send POST Request With JSON" line="10">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-07-15T14:35:24.166325" level="INFO">Creating Session using : alias=bookstore, url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BookGet, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>bookstore</arg>
+<msg time="2024-07-16T16:38:20.807165" level="INFO">Creating Session using : alias=mysession, url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksPost, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-07-15T14:35:24.166325" elapsed="0.003001"/>
+<status status="PASS" start="2024-07-16T16:38:20.806171" elapsed="0.004256"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-07-15T14:35:24.170333" level="INFO">${isbn} = 9781449325862</msg>
-<var>${isbn}</var>
-<arg>9781449325862</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-07-15T14:35:24.170333" elapsed="0.000000"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-07-16T16:38:20.816077" level="INFO">${headers} = {'Content-Type': 'application/json', 'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFydGh1cmd1ZWRlcyIsInBhc3N3b3JkIjoiQTFiQENkZWYiLCJpYXQiOjE3MjExNTc2MTN9.qQ1GhzNkR5waO2W7xb1...</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<arg>Authorization=${bearer}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-07-16T16:38:20.812421" elapsed="0.005309"/>
 </kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-07-15T14:35:25.198462" level="INFO">GET Request : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BookGet/9781449325862 
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-07-16T16:38:20.819783" level="INFO">${data} = {'userId': '7a3fed54-de6c-477f-a9e7-ef8e393cb452', 'collectionOfIsbns': '[{"isbn": "9781449331818"}]'}</msg>
+<var>${data}</var>
+<arg>userId=7a3fed54-de6c-477f-a9e7-ef8e393cb452</arg>
+<arg>collectionOfIsbns=[{"isbn": "9781449331818"}]</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-07-16T16:38:20.818530" elapsed="0.001253"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2024-07-16T16:38:22.240820" level="INFO">POST Request : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksPost 
  path_url=/swagger/ 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '106', 'Content-Type': 'application/json'} 
+ body=b'{"userId": "7a3fed54-de6c-477f-a9e7-ef8e393cb452", "collectionOfIsbns": "[{\\"isbn\\": \\"9781449331818\\"}]"}' 
  </msg>
-<msg time="2024-07-15T14:35:25.198462" level="INFO">GET Response : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BookGet/9781449325862 
+<msg time="2024-07-16T16:38:22.241824" level="INFO">POST Response : url=https://bookstore.toolsqa.com/swagger/#/BookStore/BookStoreV1BooksPost 
  status=200, reason=OK 
- headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Mon, 15 Jul 2024 17:35:28 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
+ headers={'Server': 'nginx/1.17.10 (Ubuntu)', 'Date': 'Tue, 16 Jul 2024 19:38:23 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'ETag': 'W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"', 'Content-Encoding': 'gzip'} 
  body=
 &lt;!-- HTML for static distribution bundle build --&gt;
 &lt;!DOCTYPE html&gt;
@@ -175,22 +116,25 @@
 &lt;/html&gt;
  
  </msg>
-<msg time="2024-07-15T14:35:25.198462" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-07-16T16:38:22.241824" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>${BASE_URL}/${isbn}</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-07-15T14:35:24.172336" elapsed="1.027124"/>
+<arg>${BASE_URL}</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2024-07-16T16:38:20.821150" elapsed="1.420674"/>
 </kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-07-16T16:38:22.245382" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
 <arg>200</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2024-07-15T14:35:25.199460" elapsed="0.001005"/>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-07-16T16:38:22.244077" elapsed="0.001305"/>
 </kw>
-<doc>Teste para obter um único livro pelo ISBN</doc>
-<status status="PASS" start="2024-07-15T14:35:24.165326" elapsed="1.035139"/>
+<status status="PASS" start="2024-07-16T16:38:20.804665" elapsed="1.441714"/>
 </test>
-<status status="PASS" start="2024-07-15T14:35:24.009570" elapsed="1.192876"/>
->>>>>>> 08f93fbfb2d77a443438e436554dd06e69a37afa
+<status status="PASS" start="2024-07-16T16:38:20.549527" elapsed="1.699097"/>
 </suite>
 <statistics>
 <total>
@@ -199,11 +143,7 @@
 <tag>
 </tag>
 <suite>
-<<<<<<< HEAD
-<stat pass="1" fail="0" skip="0" id="s1" name="Put">Put</stat>
-=======
-<stat pass="1" fail="0" skip="0" id="s1" name="Test Get Book">Test Get Book</stat>
->>>>>>> 08f93fbfb2d77a443438e436554dd06e69a37afa
+<stat pass="1" fail="0" skip="0" id="s1" name="Post Books">Post Books</stat>
 </suite>
 </statistics>
 <errors>
